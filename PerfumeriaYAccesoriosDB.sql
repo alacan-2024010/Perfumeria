@@ -63,7 +63,7 @@ create table Ventas (
 
 -- VENTAS
 -- CRUD TRABAJADO POR Cristian
-Ventas:
+
 delimiter $$
 create procedure sp_agregarVenta(
     in fechaVenta datetime,
@@ -75,6 +75,22 @@ begin
     values (fechaVenta, totalVenta, codigoCliente, codigoEmpleado);
 end $$
 delimiter ;
+call sp_agregarVenta('2025-07-01 10:15:00', 125.50, 1, 2);
+call sp_agregarVenta('2025-07-01 11:45:00', 89.99, 2, 1);
+call sp_agregarVenta('2025-07-02 09:30:00', 250.00, 3, 4);
+call sp_agregarVenta('2025-07-02 14:00:00', 145.75, 4, 5);
+call sp_agregarVenta('2025-07-03 12:10:00', 310.25, 5, 3);
+call sp_agregarVenta('2025-07-03 16:45:00', 72.80, 1, 1);
+call sp_agregarVenta('2025-07-04 08:50:00', 199.99, 2, 2);
+call sp_agregarVenta('2025-07-04 18:00:00', 65.40, 3, 4);
+call sp_agregarVenta('2025-07-05 10:20:00', 158.90, 4, 3);
+call sp_agregarVenta('2025-07-05 13:00:00', 230.15, 5, 5);
+call sp_agregarVenta('2025-07-06 15:30:00', 95.00, 1, 2);
+call sp_agregarVenta('2025-07-06 17:45:00', 178.25, 2, 1);
+call sp_agregarVenta('2025-07-07 11:00:00', 320.00, 3, 4);
+call sp_agregarVenta('2025-07-07 14:10:00', 112.35, 4, 5);
+call sp_agregarVenta('2025-07-07 19:30:00', 88.80, 5, 3);
+
 
 delimiter $$
 create procedure sp_listarVentas()
