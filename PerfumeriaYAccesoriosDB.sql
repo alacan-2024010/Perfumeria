@@ -76,6 +76,22 @@ begin
 end $$
 delimiter ;
 
+call sp_agregarDetalleVenta(2, 15.99, 1, 101);
+call sp_agregarDetalleVenta(1, 20.50, 1, 102);
+call sp_agregarDetalleVenta(3, 9.75, 2, 103);
+call sp_agregarDetalleVenta(5, 12.00, 2, 104);
+call sp_agregarDetalleVenta(4, 18.30, 3, 105);
+call sp_agregarDetalleVenta(2, 5.25, 3, 106);
+call sp_agregarDetalleVenta(1, 45.00, 4, 107);
+call sp_agregarDetalleVenta(6, 7.90, 4, 108);
+call sp_agregarDetalleVenta(3, 11.49, 5, 109);
+call sp_agregarDetalleVenta(2, 22.10, 5, 110);
+call sp_agregarDetalleVenta(1, 30.00, 6, 111);
+call sp_agregarDetalleVenta(7, 4.99, 6, 112);
+call sp_agregarDetalleVenta(2, 13.75, 7, 113);
+call sp_agregarDetalleVenta(3, 19.99, 7, 114);
+call sp_agregarDetalleVenta(5, 8.60, 8, 115);
+
 delimiter $$
 create procedure sp_listarDetalleVentas()
 begin
