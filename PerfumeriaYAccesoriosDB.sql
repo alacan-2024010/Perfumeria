@@ -74,7 +74,6 @@ create table DetalleCompras (
 -- CRUD TRABAJADO POR Iverson
 
 -- DETALLECOMPRAS
-DetalleCompras:
 delimiter $$
 create procedure sp_agregarDetalleCompra(
     in cantidadDC int,
