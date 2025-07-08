@@ -45,7 +45,7 @@ create table Productos (
     constraint FK_categoria foreign key (codigoCategoria) 
         references Categorias(codigoCategoria) on delete cascade,
     constraint FK_proveedor foreign key (codigoProveedor) 
-        references Proveedores(codigoProveedor) on delete cascade
+        references Proveedores(codigoProveedor) on delete cascade
 );
 
 -- 5. empleados (Le toca a Angel)
@@ -223,11 +223,11 @@ Delimiter $$
 	create procedure sp_AgregarProveedores(
 		in nombreProveedor varchar(100),
 		in direccionProveedor varchar(255),
-		in telefonoProveedor varchar(20) not null,
-		in correoProveedor varchar(100) not null)
+		in telefonoProveedor varchar(20) ,
+		in correoProveedor varchar(100) )
 	begin
 		insert into Proveedores (nombreProveedor, direccionProveedor, telefonoProveedor, correoProveedor)
-		values (nombreProveedor, direccionProveedor, telefonoProveedor, correoProveedor)
+		values (nombreProveedor, direccionProveedor, telefonoProveedor, correoProveedor);
 	end $$
 Delimiter ;
 
@@ -273,7 +273,7 @@ Delimiter $$
 	create procedure sp_BuscarProveedor
 		(in codigoProv int)
 	begin
-		select codigoProveedor, nombreProveedor, direccionProveedor, telefonoProveedor, correoProveedor from Proveedores;
+		select codigoProveedor, nombreProveedor, direccionProveedor, telefonoProveedor, correoProveedor from Proveedores
 			where codigoProveedor = codigoProv;
 	end $$
 Delimiter ;
@@ -351,8 +351,8 @@ create procedure sp_eliminarCategoria(in codigoC int)
 begin
     delete from categorias 
 		where codigoCategoria = codigoC;
-end $$
-delimiter ;
+end $$
+delimiter ;
 -- PRODUCTOS
 -- CRUD TRABAJADO POR Chacón
 delimiter $$
@@ -385,7 +385,7 @@ call sp_agregarProducto('Perfume fuerte', 'Aroma intenso, para ocasiones especia
 call sp_agregarProducto('Aretes largos', 'Aretes dorados que cuelgan', 55.00, 30, 2, 3);
 
 
---Listar Producto
+-- Listar Producto
 delimiter $$
 	create procedure sp_listarProductos()
 	begin
@@ -394,7 +394,7 @@ delimiter $$
 	end $$
 delimiter ;
 
---Buscar Producto
+-- Buscar Producto
 delimiter $$
 	create procedure sp_buscarProducto(in codigoP int)
 	begin
@@ -404,7 +404,7 @@ delimiter $$
 	end $$
 delimiter ;
 
---Editar Producto
+-- Editar Producto
 delimiter $$
 	create procedure sp_editarProducto(
 		in codigoP int,
@@ -426,14 +426,14 @@ delimiter $$
 	end $$
 delimiter ;
 
---Eliminar Producto
+-- Eliminar Producto
 delimiter $$
 	create procedure sp_eliminarProducto(in codigoP int)
 	begin
 		delete from productos
 			where codigoProducto = codigoP;
-	end $$
-delimiter ;
+	end $$
+delimiter ;
 
 -- EMPLEADOS
 -- CRUD TRABAJADO POR Angel
@@ -476,7 +476,7 @@ delimiter $$
 		from empleados;
 	end $$
 delimiter ;
-CALL sp_listarEmpleados;
+CALL sp_listarEmpleados();
 
 delimiter $$
 	create procedure sp_buscarEmpleado(in codigoE int)
@@ -515,23 +515,23 @@ create procedure sp_eliminarEmpleado(
 	in codigoE int)
 begin
 	delete from Empleados
-		Where codigoE = codigoEmpleado;
+		Where codigoEmpleado = codigoE;
 end $$
 delimiter ;
-CALL sp_eliminarEmpleado(1);
+-- CALL sp_eliminarEmpleado(1);
 
 -- VENTAS
 -- CRUD TRABAJADO POR Cristian
 
 delimiter $$
 create procedure sp_agregarVenta(
-    in fechaVenta datetime,
-    in totalVenta decimal(10,2),
+    in fecha datetime,
+    in total decimal(10,2),
     in codigoCliente int,
     in codigoEmpleado int)
 begin
     insert into ventas (fecha, total, codigoCliente, codigoEmpleado)
-    values (fechaVenta, totalVenta, codigoCliente, codigoEmpleado);
+    values (fecha, total, codigoCliente, codigoEmpleado);
 end $$
 delimiter ;
 call sp_agregarVenta('2025-07-01 10:15:00', 125.50, 1, 2);
@@ -590,8 +590,8 @@ create procedure sp_eliminarVenta(in codigoV int)
 begin
     delete from ventas 
 		where codigoVenta = codigoV;
-end $$
-delimiter ;
+end $$
+delimiter ;
 -- DETALLEVENTAS
 -- CRUD TRABAJADO POR Pablo
 delimiter $$
@@ -606,21 +606,21 @@ begin
 end $$
 delimiter ;
 
-call sp_agregarDetalleVenta(2, 15.99, 1, 101);
-call sp_agregarDetalleVenta(1, 20.50, 1, 102);
-call sp_agregarDetalleVenta(3, 9.75, 2, 103);
-call sp_agregarDetalleVenta(5, 12.00, 2, 104);
-call sp_agregarDetalleVenta(4, 18.30, 3, 105);
-call sp_agregarDetalleVenta(2, 5.25, 3, 106);
-call sp_agregarDetalleVenta(1, 45.00, 4, 107);
-call sp_agregarDetalleVenta(6, 7.90, 4, 108);
-call sp_agregarDetalleVenta(3, 11.49, 5, 109);
-call sp_agregarDetalleVenta(2, 22.10, 5, 110);
-call sp_agregarDetalleVenta(1, 30.00, 6, 111);
-call sp_agregarDetalleVenta(7, 4.99, 6, 112);
-call sp_agregarDetalleVenta(2, 13.75, 7, 113);
-call sp_agregarDetalleVenta(3, 19.99, 7, 114);
-call sp_agregarDetalleVenta(5, 8.60, 8, 115);
+call sp_agregarDetalleVenta(2, 15.99, 1, 1);
+call sp_agregarDetalleVenta(1, 20.50, 1, 2);
+call sp_agregarDetalleVenta(3, 9.75, 2, 3);
+call sp_agregarDetalleVenta(5, 12.00, 2, 4);
+call sp_agregarDetalleVenta(4, 18.30, 3, 5);
+call sp_agregarDetalleVenta(2, 5.25, 3, 6);
+call sp_agregarDetalleVenta(1, 45.00, 4, 7);
+call sp_agregarDetalleVenta(6, 7.90, 4, 8);
+call sp_agregarDetalleVenta(3, 11.49, 5, 9);
+call sp_agregarDetalleVenta(2, 22.10, 5, 10);
+call sp_agregarDetalleVenta(1, 30.00, 6, 11);
+call sp_agregarDetalleVenta(7, 4.99, 6, 12);
+call sp_agregarDetalleVenta(2, 13.75, 7, 13);
+call sp_agregarDetalleVenta(3, 19.99, 7, 14);
+call sp_agregarDetalleVenta(5, 8.60, 8, 15);
 
 delimiter $$
 create procedure sp_listarDetalleVentas()
@@ -661,8 +661,8 @@ create procedure sp_eliminarDetalleVenta(in codigoDV int)
 begin
     delete from DetalleVentas
 		where codigoDetalleVenta = codigoDV;
-end $$
-delimiter ;
+end $$
+delimiter ;
 -- Facturas
 -- CRUD TRABAJADO POR Iverson
 delimiter $$
@@ -712,16 +712,16 @@ delimiter ;
 delimiter $$
 create procedure sp_editarFactura(
     in codigoF int,
-    in numeroFactura varchar(50),
-    in fechaEmision datetime,
-    in totalFactura decimal(10,2),
-    in codigoVenta int)
+    in numeroF varchar(50),
+    in fechaE datetime,
+    in totalF decimal(10,2),
+    in codigoV int)
 begin
     update Facturas
-    set numeroFactura = numeroFactura,
-        fechaEmision = fechaEmision,
-        totalFactura = totalFactura,
-        codigoVenta = codigoVenta
+    set numeroFactura = numeroF,
+        fechaEmision = fechaE,
+        totalFactura = totalF,
+        codigoVenta = codigoV
     where codigoFactura = codigoF;
 end $$
 delimiter ;
@@ -747,21 +747,21 @@ begin
 end $$
 delimiter ;
 
-call sp_agregarCompra('2024-01-10 08:30:00', 5420.75, 101, 201);
-call sp_agregarCompra('2024-01-11 10:15:00', 3890.50, 102, 202);
-call sp_agregarCompra('2024-01-12 14:20:00', 7234.25, 103, 203);
-call sp_agregarCompra('2024-01-13 09:45:00', 2567.80, 104, 204);
-call sp_agregarCompra('2024-01-14 16:30:00', 4890.00, 105, 205);
-call sp_agregarCompra('2024-01-15 11:25:00', 1745.60, 106, 206);
-call sp_agregarCompra('2024-01-16 13:40:00', 8210.40, 107, 207);
-call sp_agregarCompra('2024-01-17 07:55:00', 3456.90, 108, 208);
-call sp_agregarCompra('2024-01-18 15:10:00', 6678.25, 109, 209);
-call sp_agregarCompra('2024-01-19 12:45:00', 5890.75, 110, 210);
-call sp_agregarCompra('2024-01-20 17:20:00', 2934.50, 111, 211);
-call sp_agregarCompra('2024-01-21 09:35:00', 4567.30, 112, 212);
-call sp_agregarCompra('2024-01-22 14:50:00', 7145.80, 113, 213);
-call sp_agregarCompra('2024-01-23 11:15:00', 3789.40, 114, 214);
-call sp_agregarCompra('2024-01-24 16:05:00', 9456.90, 115, 215);
+call sp_agregarCompra('2024-01-10 08:30:00', 5420.75, 1, 1);
+call sp_agregarCompra('2024-01-11 10:15:00', 3890.50, 2, 2);
+call sp_agregarCompra('2024-01-12 14:20:00', 7234.25, 3, 3);
+call sp_agregarCompra('2024-01-13 09:45:00', 2567.80, 4, 4);
+call sp_agregarCompra('2024-01-14 16:30:00', 4890.00, 5, 5);
+call sp_agregarCompra('2024-01-15 11:25:00', 1745.60, 6, 6);
+call sp_agregarCompra('2024-01-16 13:40:00', 8210.40, 7, 7);
+call sp_agregarCompra('2024-01-17 07:55:00', 3456.90, 8, 8);
+call sp_agregarCompra('2024-01-18 15:10:00', 6678.25, 9, 9);
+call sp_agregarCompra('2024-01-19 12:45:00', 5890.75, 10, 10);
+call sp_agregarCompra('2024-01-20 17:20:00', 2934.50, 11, 11);
+call sp_agregarCompra('2024-01-21 09:35:00', 4567.30, 12, 12);
+call sp_agregarCompra('2024-01-22 14:50:00', 7145.80, 13, 13);
+call sp_agregarCompra('2024-01-23 11:15:00', 3789.40, 14, 14);
+call sp_agregarCompra('2024-01-24 16:05:00', 9456.90, 15, 15);
 
 delimiter $$
 create procedure sp_listarCompras()
@@ -783,16 +783,16 @@ delimiter ;
 delimiter $$
 create procedure sp_editarCompra(
     in codigoC int,
-    in fechaCompra datetime,
-    in totalCompra decimal(10,2),
-    in codigoProveedor int,
-    in codigoEmpleado int)
+    in fechaCo datetime,
+    in totalCo decimal(10,2),
+    in codigoP int,
+    in codigoE int)
 begin
     update Compras
-    set fechaCompra = fechaCompra,
-        total = totalCompra,
-        codigoProveedor = codigoProveedor,
-        codigoEmpleado = codigoEmpleado
+    set fechaCompra = fechaCo,
+        total = totalCo,
+        codigoProveedor = codigoP,
+        codigoEmpleado = codigoE
     where codigoCompra = codigoC;
 end $$
 delimiter ;
@@ -817,21 +817,21 @@ begin
 end $$
 delimiter ;
 
-call sp_agregarDetalleCompra(2, 25.50, 1, 101);
-call sp_agregarDetalleCompra(1, 13.99, 1, 102);
-call sp_agregarDetalleCompra(5, 7.25, 2, 103);
-call sp_agregarDetalleCompra(3, 45.00, 2, 104);
-call sp_agregarDetalleCompra(6, 5.75, 3, 105);
-call sp_agregarDetalleCompra(4, 32.10, 3, 106);
-call sp_agregarDetalleCompra(2, 19.99, 4, 107);
-call sp_agregarDetalleCompra(8, 3.50, 4, 108);
-call sp_agregarDetalleCompra(1, 150.00, 5, 109);
-call sp_agregarDetalleCompra(7, 1.99, 5, 110);
-call sp_agregarDetalleCompra(10, 0.99, 6, 111);
-call sp_agregarDetalleCompra(3, 27.89, 6, 112);
-call sp_agregarDetalleCompra(9, 2.25, 7, 113);
-call sp_agregarDetalleCompra(2, 120.00, 7, 114);
-call sp_agregarDetalleCompra(1, 300.00, 8, 115);
+call sp_agregarDetalleCompra(2, 25.50, 1, 1);
+call sp_agregarDetalleCompra(1, 13.99, 1, 2);
+call sp_agregarDetalleCompra(5, 7.25, 2, 3);
+call sp_agregarDetalleCompra(3, 45.00, 2, 4);
+call sp_agregarDetalleCompra(6, 5.75, 3, 5);
+call sp_agregarDetalleCompra(4, 32.10, 3, 6);
+call sp_agregarDetalleCompra(2, 19.99, 4, 7);
+call sp_agregarDetalleCompra(8, 3.50, 4, 8);
+call sp_agregarDetalleCompra(1, 150.00, 5, 9);
+call sp_agregarDetalleCompra(7, 1.99, 5, 10);
+call sp_agregarDetalleCompra(10, 0.99, 6, 11);
+call sp_agregarDetalleCompra(3, 27.89, 6, 12);
+call sp_agregarDetalleCompra(9, 2.25, 7, 13);
+call sp_agregarDetalleCompra(2, 120.00, 7, 14);
+call sp_agregarDetalleCompra(1, 300.00, 8, 15);
 
 -- listar detalleCompras
 delimiter $$
