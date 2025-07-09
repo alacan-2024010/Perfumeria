@@ -45,3 +45,27 @@ nav .links a {
 nav .links a:hover {
   color: #bdbdbd;
 }
+
+.subtitulo {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabs a button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  border-bottom: 2px solid #fff;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: border-bottom 0.3s;
+}
