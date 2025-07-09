@@ -45,3 +45,23 @@ nav .links a {
 nav .links a:hover {
   color: #bdbdbd;
 }
+
+.login-contendor {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  color: white;
+  width: 340px;
+  text-align: center;
+}
+
+.login-contendor h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.login-contendor p {
+  margin-bottom: 8px;
+}
