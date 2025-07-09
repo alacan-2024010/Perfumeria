@@ -6,6 +6,16 @@
     <title>Perfumería y Accesorios | Registrarse</title>
     <link rel="stylesheet" href="../Styles/login.css">
 </head>
+
+    <nav>
+        <a href="index.html" class="logo"> Essenza & Co.</a>
+        <div class="links">
+            <a href="index.html">Principal</a>
+            <a href="Productos.html">Productos</a>
+            <a href="AcercaNosotros.html">Acerca de nosotros</a>
+        </div>
+    </nav>
+
 <body>
     <div class="login-contendor">
         <div class="tabs">
@@ -21,10 +31,11 @@
         <p class="subtitulo">Ingresa tus datos para Registrarte</p>
         
         <form>
-        <input type="nombreCompleto" placeholder="Nombre Completo" required />
+            <input type="nombre" placeholder="Nombre" required />
+            <input type="apellido" placeholder="Apellido" required />
             <input type="correo" placeholder="Correo" required />
-            <input type="contrasenia" placeholder="Contrasenia" required />
-            <button type="ingresar">Iniciar Sesión</button>
+            <input type="contraseña" placeholder="Contraseña" required />
+            <button type="ingresar">Registrarme</button>
             <div class="extras">
             <label><input type="checkbox" />Recordarme</label>
             <a href="#">¿Olvidaste la contraseña?</a>
