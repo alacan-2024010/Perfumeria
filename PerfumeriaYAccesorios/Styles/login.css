@@ -117,3 +117,19 @@ nav .links a:hover {
 .login-contendor form button:hover {
   background: #593d84;
 }
+.extras {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.extras a {
+  color: #dcdcdc;
+  text-decoration: none;
+}
+
+.extras a:hover {
+  text-decoration: underline;
+}
