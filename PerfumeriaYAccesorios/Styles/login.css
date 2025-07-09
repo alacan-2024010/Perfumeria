@@ -46,6 +46,27 @@ nav .links a:hover {
   color: #bdbdbd;
 }
 
+.subtitulo {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  border-bottom: 2px solid #fff;
+  padding: 6px 12px;
+  cursor: default;
+}
+
 .login-contendor {
   background: rgba(255, 255, 255, 0.08);
   padding: 40px 30px;
