@@ -86,3 +86,34 @@ nav .links a:hover {
 .login-contendor p {
   margin-bottom: 8px;
 }
+
+.login-contendor form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.login-contendor form input::placeholder {
+  color: #e0e0e0;
+}
+
+.login-contendor form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #6c4f9c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-contendor form button:hover {
+  background: #593d84;
+}
