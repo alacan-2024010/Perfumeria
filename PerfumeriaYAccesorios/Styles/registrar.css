@@ -143,3 +143,19 @@ nav .links a:hover {
 .login-contendor form .boton-brillante:hover::before {
   transform: translateX(15em);
 }
+.extras {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.extras a {
+  color: #dcdcdc;
+  text-decoration: none;
+}
+
+.extras a:hover {
+  text-decoration: underline;
+}
