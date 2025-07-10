@@ -126,7 +126,7 @@ nav .links a:hover {
 }
 
 .login-contendor form .boton-brillante {
-  --green: #fd321b;
+  --blue: #003366;
   font-size: 15px;
   padding: 0.7em 2.7em;
   letter-spacing: 0.06em;
@@ -136,18 +136,18 @@ nav .links a:hover {
   overflow: hidden;
   transition: all 0.3s;
   line-height: 1.4em;
-  border: 2px solid var(--green);
-  background: linear-gradient(to right, rgba(253, 46, 27, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
-  color: var(--green);
-  box-shadow: inset 0 0 10px rgba(227, 61, 5, 0.4), 0 0 9px 3px rgba(218, 71, 21, 0.1);
+  border: 2px solid var(--blue);
+  background: linear-gradient(to right,rgba(0, 51, 102, 0.1) 1%,transparent 40%,transparent 60%, rgba(0, 85, 204, 0.1) 100%);
+  color: var(--blue);
+  box-shadow: inset 0 0 10px rgba(0, 51, 102, 0.4), 0 0 9px 3px rgba(0, 51, 102, 0.1);
   cursor: pointer;
   width: 100%;
   margin-top: 10px;
 }
 
 .login-contendor form .boton-brillante:hover {
-  color: #d32424;
-  box-shadow: inset 0 0 10px rgba(211, 30, 30, 0.6), 0 0 9px 3px rgba(253, 65, 27, 0.2);
+  color: #001f4d;
+  box-shadow: inset 0 0 10px #2475d399, 0 0 9px 3px #2475d333;
 }
 
 .login-contendor form .boton-brillante::before {
@@ -158,7 +158,7 @@ nav .links a:hover {
   height: 100%;
   top: 0;
   transition: transform .4s ease-in-out;
-  background: linear-gradient(to right, transparent 1%, rgba(253, 50, 27, 0.1) 40%, rgba(253, 57, 27, 0.1) 60%, transparent 100%);
+  background: linear-gradient(to right,transparent 1%, rgba(0, 85, 204, 0.1) 40%, rgba(0, 51, 102, 0.1) 60%,transparent 100%);
 }
 
 .login-contendor form .boton-brillante:hover::before {
