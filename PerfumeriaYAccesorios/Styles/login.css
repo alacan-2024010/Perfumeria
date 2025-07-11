@@ -175,7 +175,10 @@ nav .links a:hover {
 }
 
 .activo{
-  transition: 0.5s;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .activo:hover{
