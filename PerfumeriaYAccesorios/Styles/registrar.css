@@ -182,13 +182,17 @@ nav .links a:hover {
 }
 
 .activo{
-  transition: 0.5s;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .activo:hover{
-  background-color: rgb(0, 31, 77);
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,3);
-  transform: translateY(-5px);
+  background-color: rgb(0, 102, 204); 
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 102, 204, 0.7), 0 0 15px rgba(0, 200, 255, 0.4);
+  transform: translateY(-8px) scale(1.08);
   cursor: pointer;
+  color: white;
 }
