@@ -173,3 +173,15 @@ nav .links a:hover {
 .login-contendor form .boton-brillante:hover::before {
   transform: translateX(15em);
 }
+
+.activo{
+  transition: 0.5s;
+}
+
+.activo:hover{
+  background-color: rgba(211, 30, 30, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,3);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
