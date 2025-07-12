@@ -103,4 +103,58 @@ nav .links a:hover {
     pointer-events: none;
 }
 
+/* Estilo de titulos*/
+
+.productoTitulo {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #3e3e3e;
+    margin-bottom: 0.4em;
+    border-left: 5px solid #f3cb77;
+    padding-left: 0.5em;
+    transition: color 0.3s ease;
+}
+
+.productoTitulo:hover {
+    color: #d89c32;
+}
+
+.btnComprar {
+    background-color: #f3cb77;
+    color: #2c2c2c;
+    border: none;
+    padding: 0.7em 1.5em;
+    font-size: 0.95em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1em;
+}
+
+.btnComprar:hover {
+    background-color: #e6b950;
+    transform: scale(1.05);
+}
+/* Titulo de accesorios Centrado*/
+
+.categoria {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #1d1d1d;
+    margin: 2em 0 1em;
+    text-align: center;
+    position: relative;
+}
+
+.categoria::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #f3cb77;
+    margin: 0.5em auto 0;
+    border-radius: 2px;
+}
+
 
