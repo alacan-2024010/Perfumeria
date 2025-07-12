@@ -368,21 +368,39 @@ delimiter $$
 		values (nombreP, descripcionP, precioP, stockP, codigoCategoria, codigoProveedor);
 	end $$
 delimiter ;
-call sp_agregarProducto('Perfume floral', 'Huele a flores', 180.00, 20, 1, 1);
-call sp_agregarProducto('Loción de hombre', 'Aroma fuerte para caballeros', 150.00, 30, 1, 2);
-call sp_agregarProducto('Pulsera dorada', 'Pulsera bonita color oro', 90.00, 15, 2, 3);
-call sp_agregarProducto('Collar plateado', 'Collar con brillo, color plata', 110.00, 10, 2, 1);
-call sp_agregarProducto('Aretes pequeños', 'Aretes sencillos y brillantes', 40.00, 50, 2, 2);
-call sp_agregarProducto('Perfume dulce', 'Perfume con olor suave y dulce', 170.00, 25, 1, 3);
-call sp_agregarProducto('Reloj negro', 'Reloj sencillo color negro', 250.00, 8, 3, 1);
-call sp_agregarProducto('Anillo de mujer', 'Anillo sencillo para regalo', 65.00, 18, 2, 2);
-call sp_agregarProducto('Pulsera de cuero', 'Pulsera café con broche', 85.00, 12, 2, 3);
-call sp_agregarProducto('Perfume de frutas', 'Huele a frutas tropicales', 160.00, 20, 1, 1);
-call sp_agregarProducto('Bolso pequeño', 'Bolso de mano, color beige', 220.00, 10, 4, 2);
-call sp_agregarProducto('Billetera Gucci', 'Cartera básica para mujer', 140.00, 14, 4, 3);
-call sp_agregarProducto('Lentes de sol', 'Lentes oscuros con marco grande', 120.00, 17, 5, 1);
-call sp_agregarProducto('Perfume fuerte', 'Aroma intenso, para ocasiones especiales', 195.00, 22, 1, 2);
-call sp_agregarProducto('Aretes largos', 'Aretes dorados que cuelgan', 55.00, 30, 2, 3);
+call sp_agregarProducto('Dior Sauvage', 'Aroma fresco y amaderado', 1500.00, 20, 1, 1);
+call sp_agregarProducto('Bleu de Chanel', 'Fragancia cítrica y aromática', 1250.00, 20, 1, 2);
+call sp_agregarProducto('Acqua di Giò', 'Frescura marina y cítrica', 1400.00, 20, 1, 3);
+call sp_agregarProducto('1 Million', 'Aroma cálido y especiado', 1200.00, 20, 1, 4);
+call sp_agregarProducto('Le Male', 'Fragancia oriental y fresca', 1100.00, 20, 1, 5);
+call sp_agregarProducto('Terre d’Hermès', 'Aroma amaderado y cítrico', 1550.00, 20, 1, 6);
+call sp_agregarProducto('Aventus', 'Fragancia frutal y ahumada', 3500.00, 10, 1, 7);
+call sp_agregarProducto('Boss Bottled', 'Aroma cálido y especiado', 1300.00, 20, 1, 8);
+call sp_agregarProducto('Fahrenheit', 'Fragancia fresca y amaderada', 1350.00, 20, 1, 2);
+call sp_agregarProducto('Invictus', 'Aroma fresco y energético', 1250.00, 20, 1, 3);
+call sp_agregarProducto('Explorer', 'Fragancia aventurera y vibrante', 1400.00, 20, 1, 5);
+call sp_agregarProducto('Pure XS', 'Aroma dulce y especiado', 1200.00, 20, 1, 6);
+call sp_agregarProducto('La Vie Est Belle', 'Fragancia dulce y floral', 1450.00, 20, 1, 9);
+call sp_agregarProducto('J’adore', 'Aroma floral y elegante', 1600.00, 20, 1, 10);
+call sp_agregarProducto('Coco Mademoiselle', 'Fragancia fresca y floral', 1550.00, 20, 1, 11);
+call sp_agregarProducto('Black Opium', 'Aroma dulce y oriental', 1480.00, 20, 1, 12);
+call sp_agregarProducto('Light Blue', 'Fragancia cítrica y fresca', 1350.00, 20, 1, 13);
+call sp_agregarProducto('Good Girl', 'Aroma floral y especiado', 1500.00, 20, 1, 14);
+call sp_agregarProducto('Mon Guerlain', 'Fragancia suave y dulce', 1520.00, 20, 1, 15);
+call sp_agregarProducto('Flowerbomb', 'Aroma floral explosivo', 1600.00, 20, 1, 1);
+call sp_agregarProducto('Bright Crystal', 'Fragancia fresca y floral', 1300.00, 20, 1, 8);
+call sp_agregarProducto('Si', 'Aroma elegante y sofisticado', 1450.00, 20, 1, 9);
+call sp_agregarProducto('Angel', 'Fragancia dulce y gourmand', 1500.00, 20, 1, 10);
+call sp_agregarProducto('Euphoria', 'Aroma intenso y seductor', 1400.00, 20, 1, 11);
+call sp_agregarProducto('Collar de Plata', 'Collar elegante color plata', 350.00, 15, 2, 7);
+call sp_agregarProducto('Reloj Clásico', 'Reloj sencillo y elegante', 1800.00, 10, 3, 9);
+call sp_agregarProducto('Aretes de Oro', 'Aretes dorados pequeños', 750.00, 15, 2, 10);
+call sp_agregarProducto('Cinturón de Cuero', 'Cinturón clásico de cuero', 220.00, 20, 4, 12);
+call sp_agregarProducto('Cartera de Cuero', 'Cartera resistente color café', 300.00, 15, 4, 11);
+call sp_agregarProducto('Anillo de Oro 14K', 'Anillo elegante de oro 14 quilates', 1800.00, 10, 2, 15);
+call sp_agregarProducto('Pulsera de Cuero', 'Pulsera café con broche metálico', 85.00, 12, 2, 7);
+call sp_agregarProducto('Lentes de Sol', 'Lentes oscuros con marco grande', 120.00, 17, 5, 11);
+call sp_agregarProducto('Bolso pequeño', 'Bolso de mano, color beige', 220.00, 10, 4, 12);
 
 
 -- Listar Producto
