@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #1d1d1d;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav .links a {
+    margin-left: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav .links a:hover {
+    color: #e6ddca;
+}
+
+/* HEADER CON BÚSQUEDA */
+.encabezado {
+    background-color: #f8f6f4;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.buscar {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+}
+
+.buscar input {
+    width: 100%;
+    padding: 1.2em 0.8em 0.6em;
+    border: 2px solid #bbb;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1em;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.buscar input:focus {
+    border-color: #f3cb77;
+}
+
+.buscar label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1em;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background-color: transparent;
+}
+
+.buscar input:focus + label,
+.buscar input:not(:placeholder-shown) + label {
+    top: 6px;
+    font-size: 0.75em;
+    background-color: #f8f6f4;
+    padding: 0 6px;
+    color: #333;
+}
+
