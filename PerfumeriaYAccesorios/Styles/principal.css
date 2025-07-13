@@ -104,24 +104,23 @@ nav .links a:hover {
 }
 
 /* Estilo de titulos*/
-
 .productoTitulo {
     font-size: 1.4em;
     font-weight: bold;
-    color: #3e3e3e;
+    color: #a83279; 
     margin-bottom: 0.4em;
-    border-left: 5px solid #f3cb77;
+    border-left: 5px solid #ffd8a9; 
     padding-left: 0.5em;
     transition: color 0.3s ease;
 }
 
 .productoTitulo:hover {
-    color: #d89c32;
+    color: #87215d;
 }
 
 .btnComprar {
-    background-color: #f3cb77;
-    color: #2c2c2c;
+    background-color: #a83279;
+    color: white;
     border: none;
     padding: 0.7em 1.5em;
     font-size: 0.95em;
@@ -133,9 +132,10 @@ nav .links a:hover {
 }
 
 .btnComprar:hover {
-    background-color: #e6b950;
+    background-color: #87215d;
     transform: scale(1.05);
 }
+
 /* Titulo de accesorios Centrado*/
 
 .categoria {
@@ -156,5 +156,79 @@ nav .links a:hover {
     margin: 0.5em auto 0;
     border-radius: 2px;
 }
+
+/* estilo para stock */
+.stock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    background-color: #fff9f6;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(168, 50, 121, 0.1); 
+    padding: 1.5em;
+    margin: 1em auto;
+    max-width: 1000px;
+    transition: transform 0.2s ease;
+}
+
+.stock:hover {
+    transform: scale(1.01);
+}
+
+/* estilo para productos de mujer */
+.productosMeh .tituloProducto {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #a83279; /* vino */
+    margin: 0.5em 0 0.2em;
+}
+
+.productosMeh .marcaProducto {
+    font-size: 0.9em;
+    color: #6a1b4d;
+    margin-bottom: 0.4em;
+}
+
+.productosMeh .etiqueta {
+    display: inline-block;
+    background-color: #ffd8e1;
+    color: #a83279;
+    padding: 0.25em 0.6em;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+}
+
+.productosMeh .precio {
+    font-size: 1em;
+    font-weight: bold;
+    color: #a83279;
+    margin-bottom: 0.6em;
+}
+/*  tamanio imagen */
+.imgProducto {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+}
+
+.imgProducto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.imgProducto img:hover {
+    transform: scale(1.05);
+}
+
+
+
 
 
