@@ -156,5 +156,126 @@ nav .links a:hover {
     margin: 0.5em auto 0;
     border-radius: 2px;
 }
+ /* Estilo de productos destacados */
+ .destacado{
+    font-family: chill;
+    font-size: 45px;
+    line-height: 60px;
+    display: block;
+    transform: translateX(150px);
+}
 
+.destacado:hover{
+    cursor: default;
+    animation: big 1.3s both infinite alternate;
+}
+
+
+.productos{
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #083627;
+    border-radius: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+.productos {
+    view-timeline-name: --mas;
+    animation-name: scroll;
+    animation-fill-mode: both;
+    animation-timeline: --mas;
+    animation-range: entry 30% cover 50%;
+}
+
+.stock {
+    display: flex;
+    gap: 30px;
+    background-color: #083627;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    margin: auto;
+    color: #e0e0e0;
+    margin-bottom: 40px;
+}
+
+.stock {
+    view-timeline-name: --mas;
+    animation-name: scroll;
+    animation-fill-mode: both;
+    animation-timeline: --mas;
+    animation-range: entry 10% cover 60%;
+}
+
+.imgStock img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.temaProducto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productoTitulo {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-family: roboto;
+    }
+
+.descripcionProducto {
+    font-size: 15px;
+    color: #c0c0c0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: sans-serif;
+}
+
+.infoProducto p {
+    margin: 6px 0;
+    font-size: 15px;
+    font-family: roboto;
+    font-weight: bold;
+}
+
+.btnComprar {
+    align-self: flex-start;
+    padding: 12px 24px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.btnComprar:hover {
+    background-color: #3730a3;
+    box-shadow:   10px 10px 20px #151922, -10px -10px 20px #0d0917
+}
+
+.btnComprar:active{
+    box-shadow:  inset 10px 10px 20px #29218d, -10px -10px 20px #150f23;
+}
 
