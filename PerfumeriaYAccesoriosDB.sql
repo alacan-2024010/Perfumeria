@@ -401,6 +401,11 @@ call sp_agregarProducto('Anillo de Oro 14K', 'Anillo elegante de oro 14 quilates
 call sp_agregarProducto('Pulsera de Cuero', 'Pulsera café con broche metálico', 85.00, 12, 2, 7);
 call sp_agregarProducto('Lentes de Sol', 'Lentes oscuros con marco grande', 120.00, 17, 5, 11);
 call sp_agregarProducto('Bolso pequeño', 'Bolso de mano, color beige', 220.00, 10, 4, 12);
+call sp_agregarProducto('Pulsera de Diamantes', 'Pulsera elegante con diamantes incrustados', 7500.00, 3, 2, 1);
+call sp_agregarProducto('Anillo de Platino', 'Anillo de platino con diseño moderno y exclusivo', 9500.00, 2, 2, 2);
+call sp_agregarProducto('Bolso Chanel Classic', 'Bolso clásico de Chanel en piel negra', 12000.00, 1, 4, 3);
+call sp_agregarProducto('Perfume Homme Intense', 'Fragancia masculina con notas amaderadas y especiadas', 2800.00, 5, 1, 4);
+call sp_agregarProducto('Perfume Femme Elegance', 'Perfume femenino floral con fondo de vainilla', 3200.00, 5, 1, 5);
 
 
 -- Listar Producto
