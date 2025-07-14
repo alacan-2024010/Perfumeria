@@ -112,14 +112,14 @@ nav .links a:hover::after {
 .buscar {
     position: relative;
     display: inline-block;
-    width: 100%;
-    max-width: 500px;
+    width: 120%;
+    max-width: 600px;
     z-index: 1;
 }
 
 .buscar input {
     width: 100%;
-    padding: 1.8em 1.5em 1em 4em;
+    padding: 1.8em 1.5em 1em 4em; /* espacio para la lupa */
     border: 3px solid #0066ff;
     border-radius: 50px;
     outline: none;
@@ -159,21 +159,24 @@ nav .links a:hover::after {
     background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
     padding: 0 12px;
     color: #0066ff;
-    border-radius: 15px;
+    border-radius: 10px;
     font-weight: 700;
 }
 
 .buscar .icono-lupa {
     position: absolute;
-    left: 20px;
     top: 50%;
+    left: 1.2em;
     transform: translateY(-50%);
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
     opacity: 0.8;
-    pointer-events: none;
     filter: hue-rotate(220deg) brightness(1.2);
+    pointer-events: none;
+    z-index: 2;
 }
+
+
 
 /* Estilo de títulos */
 .productoTitulo {
