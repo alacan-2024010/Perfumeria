@@ -285,12 +285,14 @@ body {
     color: #333;
 }
 
-/* Estilo para las secciones de productos */
 .productosHz {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
     gap: 20px;
     padding: 20px;
+
+    overflow-x: auto;      
+    overflow-y: hidden;    
+    white-space: nowrap;   
 }
 
 .producto {
