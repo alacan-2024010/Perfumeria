@@ -237,7 +237,7 @@ nav .links a:hover::after {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     position: relative;
-    text-shadow: 0 0 10px rgba(166, 124, 0, 0.5);
+    text-shadow:  0 0 10px rgba(166, 124, 0, 0.5);
 }
 
 .destacado::after {
@@ -552,7 +552,146 @@ body {
     margin-bottom: 80px;
 }
 
+/* Perfumes de Hombre */
+.productosHzH {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
 
+.productosHzH::-webkit-scrollbar {
+    height: 10px;
+}
+
+.productosHzH::-webkit-scrollbar-track {
+    background: #e9f1fb; 
+    border-radius: 10px;
+}
+
+.productosHzH::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #aaccee, #88bbee); 
+    border-radius: 10px;
+}
+
+.productoH {
+    background: linear-gradient(135deg, #f7fbff 0%, #dbeeff 100%);
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(100, 140, 200, 0.1);
+    transition: all 0.4s ease;
+    border: 2px solid rgba(100, 140, 200, 0.15);
+    position: relative;
+    overflow: hidden;
+    min-width: 280px;
+}
+
+.productoH::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #aaccee, #88bbee);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.productoH:hover::before {
+    transform: scaleX(1);
+}
+
+.productoH:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(136, 187, 238, 0.3);
+    border-color: #88bbee;
+    background: linear-gradient(135deg, #d0e3ff 0%, #b0d1ff 100%);
+}
+
+.productoH:hover .imgProductoH {
+    transform: scale(1.08);
+    border-color: #88bbee;
+}
+
+.tituloProductoH {
+    color: #557fcf;
+    margin: 20px 0;
+    font-size: 1.3em;
+    font-weight: 800;
+    text-shadow: 0 0 8px rgba(136, 187, 238, 0.25);
+}
+
+.marcaProductoH {
+    color: #4162a3;
+    font-size: 1em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.etiquetaH {
+    display: inline-block;
+    background: linear-gradient(135deg, #73b5f7 0%, #2f97ff 100%);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    margin: 15px 0;
+    font-weight: 900;
+    box-shadow: 0 6px 15px rgba(136, 187, 238, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.precioH {
+    color: #557fcf;
+    font-weight: 800;
+    margin: 15px 0;
+    font-size: 1.4em;
+    text-shadow: 0 0 8px rgba(136, 187, 238, 0.2);
+}
+
+.btnCompH {
+    background: linear-gradient(135deg, #6a9ced 0%, #3469d1 100%);
+    color: #f0f6ff; 
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 100%;
+    font-weight: 800; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(52, 105, 209, 0.6);
+}
+
+.btnCompH::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+    transition: left 0.6s ease;
+}
+
+.btnCompH:hover::before {
+    left: 100%;
+}
+
+.btnCompH:hover {
+    background: linear-gradient(135deg, #3469d1 0%, #274ca0 100%);
+    color: #e2ebff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(39, 76, 160, 0.7);
+}
 
 /* Animaciones adicionales */
 @keyframes scroll {
