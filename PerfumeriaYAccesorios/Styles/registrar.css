@@ -27,11 +27,33 @@ nav {
   backdrop-filter: blur(6px);
 }
 
-nav .logo {
-  font-size: 1.5rem;
+.titulo{
+  font-size: 22px;
   font-weight: bold;
-  color: #fff;
-  text-decoration: none;
+  background: linear-gradient(90deg, #9aadff, #c4f7fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255, 150, 150, 0.3);
+  letter-spacing: 1.3px;
+  margin-bottom: 10px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInSlide 0.8s ease-out 0.3s forwards;
+
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.titulo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 12px rgba(255, 120, 120, 0.6);
+}
+
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 nav .links a {
@@ -92,14 +114,26 @@ nav .links a:hover {
 }
 
 .login-contendor {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 50px 35px;
+  width: 370px;
   color: white;
-  width: 340px;
   text-align: center;
+  transition: all 0.4s ease;
+  animation: aparecer 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+} 
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .login-contendor h2 {
@@ -115,10 +149,22 @@ nav .links a:hover {
   width: 100%;
   padding: 12px 14px;
   margin: 10px 0;
-  border: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
   color: white;
+  opacity: 0.50;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+.login-contendor form input:focus {
+  border: 1px solid #3399ff;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(51, 153, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
 .login-contendor form input::placeholder {
