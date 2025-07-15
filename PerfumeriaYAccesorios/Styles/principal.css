@@ -712,7 +712,7 @@ body {
 }
 
 .productosHzM::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #999999, #777777);
+    background: linear-gradient(90deg, #e49dc8, #d24dbe);
     border-radius: 10px;
 }
 
