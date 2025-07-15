@@ -290,20 +290,20 @@ nav .links a:hover::after {
 }
 
 /* estilo para productos de mujer */
-.productosMeh .tituloProducto {
+.productosMeh .tituloProductoM {
     font-size: 1.1em;
     font-weight: 600;
     color: #a83279; /* vino */
     margin: 0.5em 0 0.2em;
 }
 
-.productosMeh .marcaProducto {
+.productosMeh .marcaProductoM {
     font-size: 0.9em;
     color: #6a1b4d;
     margin-bottom: 0.4em;
 }
 
-.productosMeh .etiqueta {
+.productosMeh .etiquetaM {
     display: inline-block;
     background-color: #ffd8e1;
     color: #a83279;
@@ -314,7 +314,7 @@ nav .links a:hover::after {
     margin-bottom: 0.5em;
 }
 
-.productosMeh .precio {
+.productosMeh .precioM {
     font-size: 1em;
     font-weight: bold;
     color: #a83279;
@@ -581,7 +581,7 @@ body {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #0b0b0b, #100d10);
+    background: linear-gradient(90deg, #131111, #100d10);
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
@@ -594,7 +594,7 @@ body {
     transform: translateY(-15px);
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
     border-color: #ece3e3;
-    background: linear-gradient(135deg, #fde0e0 0%, #ece9e9 100%);
+    background: linear-gradient(135deg, #8d7f7f 0%, #ece9e9 100%);
 }
 
 .imgProducto {
@@ -612,7 +612,7 @@ body {
 }
 
 .tituloProducto {
-    color: #0e0b0b;
+    color: #100d0d;
     margin: 20px 0;
     font-size: 1.3em;
     font-weight: 700;
@@ -620,7 +620,7 @@ body {
 }
 
 .marcaProducto {
-    color: #555555;
+    color: #100d0d;
     font-size: 1em;
     margin-bottom: 15px;
     font-weight: 600;
@@ -629,7 +629,7 @@ body {
 .etiqueta {
     display: inline-block;
     background: linear-gradient(135deg, #f6efef 0%, #e4dfdf 100%);
-    color: rgb(250, 237, 237);
+    color: rgb(28, 20, 20);
     padding: 8px 16px;
     border-radius: 25px;
     font-size: 0.9em;
@@ -641,7 +641,7 @@ body {
 }
 
 .precio {
-    color: #fbf7f9;
+    color: #100d0d;
     font-weight: 800;
     margin: 15px 0;
     font-size: 1.4em;
