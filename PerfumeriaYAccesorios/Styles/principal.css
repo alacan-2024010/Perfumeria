@@ -68,11 +68,51 @@ nav .links a:hover::after {
 
 /* Estilo neutro para encabezado */
 .encabezado {
+    background: linear-gradient(135deg, #001122 0%, #7fa0ee 50%, #0066ff 100%);
     background: #f9f9f5; /* Blanco hueso */
     padding: 4em 2em;
     text-align: center;
     position: relative;
     overflow: hidden;
+}
+
+.seleccionar-productos {
+    position: relative;
+    display: inline-block;
+}
+
+.seleccionar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    background: #000; 
+    padding: 0.3em 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.seleccionar-productos:hover .seleccionar {
+    display: block;
+}
+
+
+.seleccionar a {
+    display: block;
+    padding: 0.3em 0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 0.85rem;
+    text-align: left;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.seleccionar a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
 }
 
 /* Buscador */
@@ -94,6 +134,8 @@ nav .links a:hover::after {
     background: #ffffff;
     color: #333;
     transition: all 0.4s ease;
+    box-shadow: 0 15px 40px rgba(114, 195, 242, 0.3);
+    color: #001122;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     font-weight: 500;
 }
@@ -140,12 +182,53 @@ nav .links a:hover::after {
     filter: grayscale(100%);
 }
 
+
+/* Estilo de titulos*/
+.productoTitulo {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #a83279; 
+    margin-bottom: 0.4em;
+    border-left: 5px solid #ffd8a9; 
+    padding-left: 0.5em;
+    transition: color 0.3s ease;
+}
+
+.productoTitulo:hover {
+    color: #87215d;
+}
+
+.btnComprar {
+    background-color: #a83279;
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    font-size: 0.95em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1em;
+}
+
+.btnComprar:hover {
+    background-color: #87215d;
+    transform: scale(1.05);
+}
+
+/* Titulo de accesorios Centrado*/
+
+
+
+
+/* Estilo de títulos */
 /* Estilo de títulos neutro */
 .productoTitulo {
     font-size: 1.8em;
     font-weight: 800;
     color: #444444; /* Gris oscuro */
     margin-bottom: 0.8em;
+    border-left: 8px solid #67c8d2;
     border-left: 8px solid #dcd7ca; /* Blanco hueso/gris muy claro */
     padding-left: 1.5em;
     transition: all 0.3s ease;
@@ -160,6 +243,7 @@ nav .links a:hover::after {
     bottom: -8px;
     width: 0;
     height: 4px;
+    background: linear-gradient(90deg, #8cb8fa, #66ccff);
     background: linear-gradient(90deg, #dcd7ca, #bfb9ac); /* Degradado suave gris hueso */
     transition: width 0.4s ease;
     border-radius: 2px;
@@ -168,6 +252,7 @@ nav .links a:hover::after {
 .productoTitulo:hover {
     color: #6e6b63; /* Gris más claro al hacer hover */
     transform: translateX(8px);
+    text-shadow: 0 0 15px rgba(117, 154, 211, 0.5);
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
 }
 
@@ -175,8 +260,12 @@ nav .links a:hover::after {
     width: 100%;
 }
 
+/* Título de categorías centrado */
+
+
 
 /* Título de categorías centrado y neutro */
+
 .categoria {
     font-size: 2.5em;
     font-weight: 800;
@@ -221,6 +310,83 @@ nav .links a:hover::after {
 
 
 
+/* estilo para stock */
+.stock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    background-color: #fff9f6;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(120, 205, 236, 0.1); 
+    padding: 1.5em;
+    margin: 1em auto;
+    max-width: 1000px;
+    transition: transform 0.2s ease;
+}
+
+.stock:hover {
+    transform: scale(1.01);
+}
+
+/* estilo para productos de mujer */
+.productosMeh .tituloProductoM {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #a83279; /* vino */
+    margin: 0.5em 0 0.2em;
+}
+
+.productosMeh .marcaProductoM {
+    font-size: 0.9em;
+    color: #6a1b4d;
+    margin-bottom: 0.4em;
+}
+
+.productosMeh .etiquetaM {
+    display: inline-block;
+    background-color: #ffd8e1;
+    color: #a83279;
+    padding: 0.25em 0.6em;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+}
+
+.productosMeh .precioM {
+    font-size: 1em;
+    font-weight: bold;
+    color: #a83279;
+    margin-bottom: 0.6em;
+}
+/*  tamanio imagen */
+.imgProducto {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+}
+
+.imgProducto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.imgProducto img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* Estilo de productos destacados */
+
 /* Estilo de productos destacados neutro */
 .destacado {
     font-family: 'Segoe UI', sans-serif;
@@ -232,6 +398,8 @@ nav .links a:hover::after {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 4px;
+
+    background: linear-gradient(135deg, #6cadee 0%, #0066ff 50%, #66ccff 100%);
     background: linear-gradient(135deg, #C9B037 0%, #A67C00 50%, #7E6600 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -239,6 +407,7 @@ nav .links a:hover::after {
     position: relative;
     text-shadow:  0 0 10px rgba(166, 124, 0, 0.5);
 }
+
 
 .destacado::after {
     content: '';
@@ -267,6 +436,8 @@ nav .links a:hover::after {
 .stock {
     display: flex;
     gap: 50px;
+
+    background: linear-gradient(135deg, #7bbcfd 0%, #8caefd 50%, #0066ff 100%);
     background: linear-gradient(135deg, #faf7f1 0%, #f0ede7 50%, #e7e4db 100%);
     padding: 50px;
     border-radius: 30px;
@@ -287,6 +458,9 @@ nav .links a:hover::after {
     left: 0;
     right: 0;
     bottom: 0;
+
+    background: radial-gradient(circle at 20% 80%, rgba(102, 204, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(77, 146, 249, 0.15) 0%, transparent 50%);
     background: radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.015) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.01) 0%, transparent 50%);
     pointer-events: none;
@@ -393,13 +567,16 @@ nav .links a:hover::after {
 }
 
 
-/* Estilo para el cuerpo de la página */
+/* Estilo para el cuerpo de la pagina */
 body {
+
+    background: linear-gradient(135deg, #5c6db7 0%, #eed6ad 50%, #bae4f6 100%);
+    color: #ffffff;
     background: linear-gradient(135deg, #f9f9f9 0%, #eeeeee 50%, #dddddd 100%);
     color: #333333;
     min-height: 100vh;
 }
-
+/* accesorios */
 .productosHz {
     display: flex;
     gap: 30px;
@@ -424,7 +601,7 @@ body {
 }
 
 .producto {
-    background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+    background: linear-gradient(135deg, #f4f2f2 0%, #f2f2f2 100%);
     border-radius: 25px;
     padding: 25px;
     text-align: center;
@@ -443,7 +620,7 @@ body {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #999999, #777777);
+    background: linear-gradient(90deg, #131111, #100d10);
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
@@ -455,8 +632,8 @@ body {
 .producto:hover {
     transform: translateY(-15px);
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
-    border-color: #999999;
-    background: linear-gradient(135deg, #f2f2f2 0%, #e8e8e8 100%);
+    border-color: #ece3e3;
+    background: linear-gradient(135deg, #8d7f7f 0%, #ece9e9 100%);
 }
 
 .imgProducto {
@@ -470,19 +647,19 @@ body {
 
 .producto:hover .imgProducto {
     transform: scale(1.08);
-    border-color: #999999;
+    border-color: #f0e8e8;
 }
 
 .tituloProducto {
-    color: #666666;
+    color: #100d0d;
     margin: 20px 0;
     font-size: 1.3em;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(102, 102, 102, 0.15);
+    text-shadow: 0 0 10px rgba(153, 136, 136, 0.15);
 }
 
 .marcaProducto {
-    color: #555555;
+    color: #100d0d;
     font-size: 1em;
     margin-bottom: 15px;
     font-weight: 600;
@@ -490,8 +667,8 @@ body {
 
 .etiqueta {
     display: inline-block;
-    background: linear-gradient(135deg, #999999 0%, #777777 100%);
-    color: white;
+    background: linear-gradient(135deg, #f6efef 0%, #e4dfdf 100%);
+    color: rgb(28, 20, 20);
     padding: 8px 16px;
     border-radius: 25px;
     font-size: 0.9em;
@@ -503,7 +680,7 @@ body {
 }
 
 .precio {
-    color: #777777;
+    color: #100d0d;
     font-weight: 800;
     margin: 15px 0;
     font-size: 1.4em;
@@ -511,8 +688,8 @@ body {
 }
 
 .btnComp {
-    background: linear-gradient(135deg, #999999 0%, #777777 100%);
-    color: white;
+    background: linear-gradient(135deg, #b5aeb5 0%, #b5aeb5 100%);
+    color: rgb(38, 33, 35);
     border: none;
     padding: 15px 25px;
     border-radius: 50px;
@@ -524,7 +701,7 @@ body {
     letter-spacing: 1px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(241, 151, 248, 0.1);
 }
 
 .btnComp::before {
@@ -534,7 +711,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(224, 216, 222, 0.3), transparent);
     transition: left 0.6s ease;
 }
 
@@ -543,12 +720,209 @@ body {
 }
 
 .btnComp:hover {
-    background: linear-gradient(135deg, #777777 0%, #555555 100%);
+    background: linear-gradient(135deg, #9d989d 0%, #9d989d 100%);
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 35px rgba(232, 227, 231, 0.968);
 }
 
 .productosMeh {
+    margin-bottom: 80px;
+}
+
+
+/* Estilo de productos de mujer */
+
+.productosHzM {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.productosHzM::-webkit-scrollbar {
+    height: 10px;
+}
+
+.productosHzM::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.productosHzM::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #e49dc8, #d24dbe);
+    border-radius: 10px;
+}
+
+.productoM {
+    background: linear-gradient(135deg, #edd3d3 0%, #f2f2f2 100%);
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    min-width: 280px;
+}
+
+.productoM::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #be2cbb, #be2cbb);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.productoM:hover::before {
+    transform: scaleX(1);
+}
+
+.productoM:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    border-color: #fbc1c1;
+    background: linear-gradient(135deg, #e69090 0%, #f5d3d3 100%);
+}
+
+.imgProductoM {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.productoM:hover .imgProductoM {
+    transform: scale(1.08);
+    border-color: #f1a0a0;
+}
+
+.tituloProductoM {
+    color: #cf8c8c;
+    margin: 20px 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(102, 102, 102, 0.15);
+}
+
+.marcaProductoM {
+    color: #555555;
+    font-size: 1em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.etiquetaM {
+    display: inline-block;
+    background: linear-gradient(135deg, #edc1c1 0%, #edc1c1 100%);
+    color: rgb(127, 81, 81);
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    margin: 15px 0;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.precioM {
+    color: #b0859b;
+    font-weight: 800;
+    margin: 15px 0;
+    font-size: 1.4em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.btnCompM {
+    background: linear-gradient(135deg, #e49dc8 0%, #e49dc8 100%);
+    color: rgb(204, 4, 111);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(241, 151, 248, 0.1);
+}
+
+.categoriaM {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #e03bbf; 
+    margin: 4em 0 3em;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px rgba(59, 125, 224, 0.15);
+}
+
+.categoriaM::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg, 
+      transparent, 
+      #efa4f0 20%,   
+      #efa4f0 50%,   
+      #efa4f0 80%, 
+      transparent
+    );
+    z-index: -1;
+    border-radius: 2px;
+}
+
+.categoriaM::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 6px;
+    background: linear-gradient(90deg, #e786e2, #e786e2);
+    margin: 1em auto 0;
+    border-radius: 3px;
+    box-shadow: 0 4px 20px rgba(59, 125, 224, 0.25);
+}
+
+.btnCompM::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(198, 107, 169, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.btnCompM:hover::before {
+    left: 100%;
+}
+
+.btnCompM:hover {
+    background: linear-gradient(135deg, #d24dbe 0%, #d24dbe 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(236, 158, 225, 0.968);
+}
+
+.productosMehM {
     margin-bottom: 80px;
 }
 
