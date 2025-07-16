@@ -7,10 +7,8 @@ create table Clientes (
 	codigoCliente int not null auto_increment,
 	nombreCliente varchar(100) not null,
 	apellidoCliente varchar(100) not null,
-	direccionCliente varchar(255) not null,
-	telefonoCliente varchar(8) not null,
 	emailCliente varchar(100),
-    fechaCompra date,
+    contrasenia varchar(100),
 	primary key PK_codigoCliente(codigoCliente)
 );
 
@@ -137,36 +135,34 @@ Delimiter $$
 	create procedure sp_AgregarCliente(
 		in nombreCliente varchar(100),
 		in apellidoCliente varchar(100),
-		in direccionCliente varchar(255),
-		in telefonoCliente varchar(8),
 		in emailCliente varchar(100),
-		in fechaCompra date)
+		in contrasenia varchar(100))
 	begin
-		insert into Clientes (nombreCliente, apellidoCliente, direccionCliente, telefonoCliente, emailCliente, fechaCompra)
-		values (nombreCliente, apellidoCliente, direccionCliente, telefonoCliente, emailCliente, fechaCompra);
+		insert into Clientes (nombreCliente, apellidoCliente , emailCliente, contrasenia)
+		values (nombreCliente, apellidoCliente, emailCliente, contrasenia);
 	end $$
 Delimiter ;
-call sp_AgregarCliente('Alan', 'Lacán', 'Zona 1, Ciudad de Guatemala', '58319705', 'alan@gmail.com', '2023-12-07');
-call sp_AgregarCliente('Andrea', 'López', 'Colonia Molino de Las Flores, Mixco', '55678901', 'andrea@hotmail.com', '2024-08-03');
-call sp_AgregarCliente('Fernando', 'Castillo', 'Zona 16, Cayalá', '44781290', 'fernando@gmail.com', '2024-08-08');
-call sp_AgregarCliente('Patricia', 'Reyes', 'Villa Nueva', '46789012', 'patricia@hotmail.com', '2024-10-10');
-call sp_AgregarCliente('Jorge', 'Chacón', 'San Miguel Petapa', '42345678', 'jorge@gmail.com', '2024-04-10');
-call sp_AgregarCliente('Daniela', 'Pérez', 'Mixco, Zona 4, Colonia Primero de Julio', '43901234', 'daniela@gmail.com', '2024-02-01');
-call sp_AgregarCliente('Ricardo', 'Flores', 'Amatitlán', '45781234', 'ricardo@hotmail.com', '2025-01-12');
-call sp_AgregarCliente('Karla', 'Belteton', 'Zona 5, Ciudad de Guatemala', '46890123', 'karla@hotmail.com', '2025-02-13');
-call sp_AgregarCliente('Gabriel', 'Ortiz', 'Zona 13, Aurora II', '42908765', 'gabriel@hotmail.com', '2025-02-17');
-call sp_AgregarCliente('Claudia', 'Navarro', 'Villa Canales, Guatemala', '47890123', 'claudia@gmail.com', '2025-01-30');
-call sp_AgregarCliente('Brenda', 'Flores', 'Zona 1, Ciudad de Guatemala', '56357794', 'brenda@gmail.com', '2023-08-12');
-call sp_AgregarCliente('Gladys', 'Belteton', 'Zona 6, Ciudad de Guatemala', '22883505', 'gladys@hotmail.com', '2023-12-24');
-call sp_AgregarCliente('Astrid', 'Lacán', 'Zona 1, Ciudad de Guatemala', '59880531', 'astrid@hotmail.com', '2023-09-27');
-call sp_AgregarCliente('Francisco', 'Lacán', 'Amatitlán', '42116602', 'francisco@gmail.com', '2024-01-07');
-call sp_AgregarCliente('Julio', 'Flores', 'Villa Nueva', '54078932', 'julio@gmail.com', '2023-11-10');
+call sp_AgregarCliente('Alan', 'Lacán', 'alan@gmail.com', '58319705');
+call sp_AgregarCliente('Andrea', 'López', 'andrea@hotmail.com', '55678901');
+call sp_AgregarCliente('Fernando', 'Castillo', 'fernando@gmail.com', '44781290');
+call sp_AgregarCliente('Patricia', 'Reyes', 'patricia@hotmail.com', '46789012');
+call sp_AgregarCliente('Jorge', 'Chacón', 'jorge@gmail.com', '42345678');
+call sp_AgregarCliente('Daniela', 'Pérez', 'daniela@gmail.com', '43901234');
+call sp_AgregarCliente('Ricardo', 'Flores', 'ricardo@hotmail.com', '45781234');
+call sp_AgregarCliente('Karla', 'Belteton', 'karla@hotmail.com', '46890123');
+call sp_AgregarCliente('Gabriel', 'Ortiz', 'gabriel@hotmail.com', '42908765');
+call sp_AgregarCliente('Claudia', 'Navarro', 'claudia@gmail.com', '47890123');
+call sp_AgregarCliente('Brenda', 'Flores', 'brenda@gmail.com', '56357794');
+call sp_AgregarCliente('Gladys', 'Belteton', 'gladys@hotmail.com', '22883505');
+call sp_AgregarCliente('Astrid', 'Lacán', 'astrid@hotmail.com', '59880531');
+call sp_AgregarCliente('Francisco', 'Lacán', 'francisco@gmail.com', '42116602');
+call sp_AgregarCliente('Julio', 'Flores', 'julio@gmail.com', '54078932');
 
 -- Listar Clientes
 Delimiter $$
 	create procedure sp_ListarClientes()
 		begin
-			select codigoCliente, nombreCliente, apellidoCliente, direccionCliente, telefonoCliente, emailCliente, fechaCompra
+			select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia
 			from Clientes;
 		end $$
 Delimiter ;
@@ -186,7 +182,7 @@ Delimiter ;
 Delimiter $$
 	create procedure sp_BuscarCliente(in codigoC int)
 	begin
-		select codigoCliente, nombreCliente, apellidoCliente, direccionCliente, telefonoCliente, emailCliente, fechaCompra from Clientes
+		select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia from Clientes
 			where codigoCliente = codigoC;
 	end $$
 Delimiter ;
@@ -198,22 +194,18 @@ Delimiter $$
 		in codigoC int,
 		in nombreC varchar(100),
 		in apellidoC varchar(100),
-		in direccionC varchar(255),
-		in telefonoC varchar(8),
 		in emailC varchar(100),
-		in fechaC date)
+		in contr varchar(100))
 	begin
 		update Clientes
 		set nombreCliente = nombreC,
 			apellidoCliente = apellidoC,
-			direccionCliente = direccionC,
-			telefonoCliente = telefonoC,
 			emailCliente = emailC,
-			fechaCompra = fechaC
+			contrasenia = contr
 		where codigoCliente = codigoC;
 	end $$
 Delimiter ;
-call sp_EditarCliente(3, 'Juan', 'Pérez', 'Zona 14', '52789540', 'juan@gmail.com', '2025-02-12');
+call sp_EditarCliente(3, 'Juan', 'Pérez', 'juan@gmail.com', '123456');
 
 -- PROVEEDORES
 -- CRUD TRABAJADO POR Adrián
