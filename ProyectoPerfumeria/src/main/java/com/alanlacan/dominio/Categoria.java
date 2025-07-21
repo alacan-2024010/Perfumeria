@@ -49,7 +49,9 @@ public class Categoria {
 
     @Override
     public String toString() {
-        return "Categoria{" + "codigoCategoria=" + codigoCategoria + ", nombre=" + nombre + '}';
+        return "Categoria{" + "codigoCategoria=" + codigoCategoria + 
+                ", nombre=" + nombre + 
+                '}';
     }
 
     public void menuCategoria() {

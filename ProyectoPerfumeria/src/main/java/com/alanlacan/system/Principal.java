@@ -3,6 +3,7 @@ package com.alanlacan.system;
 import com.alanlacan.dominio.Cliente;
 import com.alanlacan.dominio.Proveedor;
 import com.alanlacan.dominio.Categoria;
+import com.alanlacan.dominio.Producto;
 import java.util.Scanner;
 
 
@@ -14,12 +15,14 @@ public class Principal {
         Cliente c = new Cliente();
         Proveedor prov = new Proveedor();
         Categoria cate = new Categoria();
+        Producto prod = new Producto();
         
         do {            
             System.out.println("Menu de todos las Entidades:");
             System.out.println("1. Clientes");
             System.out.println("2. Proveedores");
             System.out.println("3. Categorias");
+            System.out.println("4. Productos");
             System.out.println("0. Salir");
             opc = leer.nextInt();
             
@@ -32,6 +35,9 @@ public class Principal {
                 break;
             case 3:
                 cate.menuCategoria();
+                break;
+            case 4:
+                prod.menuProducto();
                 break;
             case 0:
                 System.out.println("Has salido del menu de las Entidades");
