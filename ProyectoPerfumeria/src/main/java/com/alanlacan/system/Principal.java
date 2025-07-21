@@ -1,6 +1,7 @@
 
 package com.alanlacan.system;
 import com.alanlacan.dominio.Cliente;
+import com.alanlacan.dominio.Proveedor;
 import java.util.Scanner;
 
 
@@ -10,15 +11,21 @@ public class Principal {
         Scanner leer = new Scanner(System.in);
         int opc;
         Cliente c = new Cliente();
+        Proveedor prov = new Proveedor();
+        
         do {            
             System.out.println("Menu de todos las Entidades:");
             System.out.println("1. Clientes");
+            System.out.println("2. Proveedores");
             System.out.println("0. Salir");
             opc = leer.nextInt();
             
             switch (opc) {
             case 1:
                 c.menuCliente();
+                break;
+            case 2:
+                prov.menuProveedor();
                 break;
             case 0:
                 System.out.println("Has salido del menu de las Entidades");
