@@ -71,11 +71,11 @@ public class Principal {
                     comp.menuCompra();
                     break;
                 case 0:
-                    System.out.println("👋 ¡Gracias por usar el Sistema de Gestión!");
-                    System.out.println("🔒 Cerrando aplicación...");
+                    System.out.println("¡Gracias por usar el Sistema de Gestión!");
+                    System.out.println(" Cerrando aplicación...");
                     break;
                 default:
-                    System.out.println("⚠️ Opción inválida. Por favor elija una opción válida (0-10).");
+                    System.out.println("️ Opción inválida. Por favor elija una opción válida (0-10).");
             }
         } while (opc != 0);
         

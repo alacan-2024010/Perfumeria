@@ -1,5 +1,6 @@
 package com.alanlacan.dominio;
 
+import java.math.BigDecimal;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -21,7 +22,7 @@ public class Factura {
     private LocalDateTime fechaEmision;
 
     @Column(precision = 10, scale = 2)
-    private double totalFactura;
+    private BigDecimal totalFactura;
 
     @Column(unique = true)
     private int codigoVenta;
@@ -29,7 +30,7 @@ public class Factura {
     public Factura() {
     }
 
-    public Factura(String numeroFactura, LocalDateTime fechaEmision, double totalFactura, int codigoVenta) {
+    public Factura(String numeroFactura, LocalDateTime fechaEmision, BigDecimal totalFactura, int codigoVenta) {
         this.numeroFactura = numeroFactura;
         this.fechaEmision = fechaEmision;
         this.totalFactura = totalFactura;
@@ -60,11 +61,11 @@ public class Factura {
         this.fechaEmision = fechaEmision;
     }
 
-    public double getTotalFactura() {
+    public BigDecimal getTotalFactura() {
         return totalFactura;
     }
 
-    public void setTotalFactura(double totalFactura) {
+    public void setTotalFactura(BigDecimal totalFactura) {
         this.totalFactura = totalFactura;
     }
 
@@ -117,11 +118,11 @@ public class Factura {
                     try {
                         fechaEmision = LocalDateTime.parse(fechaStr, formatter);
                     } catch (Exception e) {
-                        System.out.println("❌ Formato de fecha inválido. Use: yyyy-MM-dd HH:mm:ss");
+                        System.out.println(" Formato de fecha inválido. Use: yyyy-MM-dd HH:mm:ss");
                         break;
                     }
                     System.out.print("Total de Factura: ");
-                    double totalFactura = leer.nextDouble();
+                    BigDecimal totalFactura = leer.nextBigDecimal();
                     System.out.print("Código de Venta: ");
                     int codigoVenta = leer.nextInt();
 
@@ -130,10 +131,10 @@ public class Factura {
                         em.getTransaction().begin();
                         em.persist(nueva);
                         em.getTransaction().commit();
-                        System.out.println("✅ Factura agregada con éxito.");
+                        System.out.println(" Factura agregada con éxito.");
                     } catch (Exception e) {
                         em.getTransaction().rollback();
-                        System.out.println("❌ Error al agregar factura: " + e.getMessage());
+                        System.out.println(" Error al agregar factura: " + e.getMessage());
                     }
                     break;
 
@@ -144,7 +145,7 @@ public class Factura {
                     if (encontrada != null) {
                         System.out.println(encontrada);
                     } else {
-                        System.out.println("❌ Factura no encontrada.");
+                        System.out.println(" Factura no encontrada.");
                     }
                     break;
 
@@ -162,10 +163,10 @@ public class Factura {
                             LocalDateTime nuevaFecha = LocalDateTime.parse(nuevaFechaStr, formatter);
                             actual.setFechaEmision(nuevaFecha);
                         } catch (Exception e) {
-                            System.out.println("❌ Formato de fecha inválido. Manteniendo fecha anterior.");
+                            System.out.println("Formato de fecha inválido. Manteniendo fecha anterior.");
                         }
                         System.out.print("Nuevo Total de Factura: ");
-                        actual.setTotalFactura(leer.nextDouble());
+                        actual.setTotalFactura(leer.nextBigDecimal());
                         System.out.print("Nuevo Código de Venta: ");
                         actual.setCodigoVenta(leer.nextInt());
 
@@ -173,13 +174,13 @@ public class Factura {
                             em.getTransaction().begin();
                             em.merge(actual);
                             em.getTransaction().commit();
-                            System.out.println("✅ Factura actualizada correctamente.");
+                            System.out.println(" Factura actualizada correctamente.");
                         } catch (Exception e) {
                             em.getTransaction().rollback();
-                            System.out.println("❌ Error al actualizar factura: " + e.getMessage());
+                            System.out.println(" Error al actualizar factura: " + e.getMessage());
                         }
                     } else {
-                        System.out.println("❌ Factura no encontrada.");
+                        System.out.println(" Factura no encontrada.");
                     }
                     break;
 
@@ -192,13 +193,13 @@ public class Factura {
                             em.getTransaction().begin();
                             em.remove(eliminar);
                             em.getTransaction().commit();
-                            System.out.println("✅ Factura eliminada con éxito.");
+                            System.out.println(" Factura eliminada con éxito.");
                         } catch (Exception e) {
                             em.getTransaction().rollback();
-                            System.out.println("❌ Error al eliminar factura: " + e.getMessage());
+                            System.out.println(" Error al eliminar factura: " + e.getMessage());
                         }
                     } else {
-                        System.out.println("❌ Factura no encontrada.");
+                        System.out.println(" Factura no encontrada.");
                     }
                     break;
 
@@ -206,7 +207,7 @@ public class Factura {
                     System.out.println("\n--- Lista de Facturas ---");
                     List<Factura> lista = em.createQuery("SELECT f FROM Factura f", Factura.class).getResultList();
                     if (lista.isEmpty()) {
-                        System.out.println("📋 No hay facturas registradas.");
+                        System.out.println(" No hay facturas registradas.");
                     } else {
                         for (Factura f : lista) {
                             System.out.println(f);
@@ -215,11 +216,11 @@ public class Factura {
                     break;
 
                 case 0:
-                    System.out.println("👋 Saliendo del menú de Facturas.");
+                    System.out.println(" Saliendo del menú de Facturas.");
                     break;
 
                 default:
-                    System.out.println("⚠️ Opción inválida. Intente de nuevo.");
+                    System.out.println("️ Opción inválida. Intente de nuevo.");
             }
         } while (op != 0);
 

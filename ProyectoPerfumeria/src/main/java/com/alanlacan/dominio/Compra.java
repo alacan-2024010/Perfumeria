@@ -1,5 +1,6 @@
 package com.alanlacan.dominio;
 
+import java.math.BigDecimal;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -18,7 +19,7 @@ public class Compra {
     private LocalDateTime fechaCompra;
 
     @Column(precision = 10, scale = 2)
-    private double total;
+    private BigDecimal total;
 
     @Column
     private int codigoProveedor;
@@ -29,7 +30,7 @@ public class Compra {
     public Compra() {
     }
 
-    public Compra(LocalDateTime fechaCompra, double total, int codigoProveedor, int codigoEmpleado) {
+    public Compra(LocalDateTime fechaCompra, BigDecimal total, int codigoProveedor, int codigoEmpleado) {
         this.fechaCompra = fechaCompra;
         this.total = total;
         this.codigoProveedor = codigoProveedor;
@@ -52,11 +53,11 @@ public class Compra {
         this.fechaCompra = fechaCompra;
     }
 
-    public double getTotal() {
+    public BigDecimal getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public void setTotal(BigDecimal total) {
         this.total = total;
     }
 
@@ -115,11 +116,11 @@ public class Compra {
                     try {
                         fechaCompra = LocalDateTime.parse(fechaStr, formatter);
                     } catch (Exception e) {
-                        System.out.println("❌ Formato de fecha inválido. Use: yyyy-MM-dd HH:mm:ss");
+                        System.out.println(" Formato de fecha inválido. Use: yyyy-MM-dd HH:mm:ss");
                         break;
                     }
                     System.out.print("Total de la Compra: ");
-                    double total = leer.nextDouble();
+                    BigDecimal total = leer.nextBigDecimal();
                     System.out.print("Código del Proveedor: ");
                     int codigoProveedor = leer.nextInt();
                     System.out.print("Código del Empleado: ");
@@ -130,10 +131,10 @@ public class Compra {
                         em.getTransaction().begin();
                         em.persist(nueva);
                         em.getTransaction().commit();
-                        System.out.println("✅ Compra agregada con éxito.");
+                        System.out.println("Compra agregada con éxito.");
                     } catch (Exception e) {
                         em.getTransaction().rollback();
-                        System.out.println("❌ Error al agregar compra: " + e.getMessage());
+                        System.out.println(" Error al agregar compra: " + e.getMessage());
                     }
                     break;
 
@@ -144,7 +145,7 @@ public class Compra {
                     if (encontrada != null) {
                         System.out.println(encontrada);
                     } else {
-                        System.out.println("❌ Compra no encontrada.");
+                        System.out.println(" Compra no encontrada.");
                     }
                     break;
 
@@ -160,10 +161,10 @@ public class Compra {
                             LocalDateTime nuevaFecha = LocalDateTime.parse(nuevaFechaStr, formatter);
                             actual.setFechaCompra(nuevaFecha);
                         } catch (Exception e) {
-                            System.out.println("❌ Formato de fecha inválido. Manteniendo fecha anterior.");
+                            System.out.println(" Formato de fecha inválido. Manteniendo fecha anterior.");
                         }
                         System.out.print("Nuevo Total: ");
-                        actual.setTotal(leer.nextDouble());
+                        actual.setTotal(leer.nextBigDecimal());
                         System.out.print("Nuevo Código del Proveedor: ");
                         actual.setCodigoProveedor(leer.nextInt());
                         System.out.print("Nuevo Código del Empleado: ");
@@ -173,13 +174,13 @@ public class Compra {
                             em.getTransaction().begin();
                             em.merge(actual);
                             em.getTransaction().commit();
-                            System.out.println("✅ Compra actualizada correctamente.");
+                            System.out.println(" Compra actualizada correctamente.");
                         } catch (Exception e) {
                             em.getTransaction().rollback();
-                            System.out.println("❌ Error al actualizar compra: " + e.getMessage());
+                            System.out.println(" Error al actualizar compra: " + e.getMessage());
                         }
                     } else {
-                        System.out.println("❌ Compra no encontrada.");
+                        System.out.println(" Compra no encontrada.");
                     }
                     break;
 
@@ -192,13 +193,13 @@ public class Compra {
                             em.getTransaction().begin();
                             em.remove(eliminar);
                             em.getTransaction().commit();
-                            System.out.println("✅ Compra eliminada con éxito.");
+                            System.out.println(" Compra eliminada con éxito.");
                         } catch (Exception e) {
                             em.getTransaction().rollback();
-                            System.out.println("❌ Error al eliminar compra: " + e.getMessage());
+                            System.out.println(" Error al eliminar compra: " + e.getMessage());
                         }
                     } else {
-                        System.out.println("❌ Compra no encontrada.");
+                        System.out.println(" Compra no encontrada.");
                     }
                     break;
 
@@ -206,7 +207,7 @@ public class Compra {
                     System.out.println("\n--- Lista de Compras ---");
                     List<Compra> lista = em.createQuery("SELECT c FROM Compra c", Compra.class).getResultList();
                     if (lista.isEmpty()) {
-                        System.out.println("📋 No hay compras registradas.");
+                        System.out.println("No hay compras registradas.");
                     } else {
                         for (Compra c : lista) {
                             System.out.println(c);
@@ -215,11 +216,11 @@ public class Compra {
                     break;
 
                 case 0:
-                    System.out.println("👋 Saliendo del menú de Compras.");
+                    System.out.println(" Saliendo del menú de Compras.");
                     break;
 
                 default:
-                    System.out.println("⚠️ Opción inválida. Intente de nuevo.");
+                    System.out.println(" Opción inválida. Intente de nuevo.");
             }
         } while (op != 0);
 
