@@ -1,0 +1,421 @@
+<%-- 
+    Document   : principal
+    Created on : 22/07/2025, 16:33:45
+    Author     : Francisco
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essenza | Productos</title>
+    <link rel="stylesheet" href="Styles/principal.css">
+    <link rel="stylesheet" href="Styles/fonts.css">
+</head>
+
+    <nav>
+        <a href="index.jsp" class="logo"> Essenza & Co.</a>
+        <div class="links">
+            <a href="principal.jsp">Principal</a>
+            <div class="seleccionar-productos">
+                <a href="Productos.jsp">Productos</a>
+                <div class="seleccionar">
+                    <a href="#destacado">Destacado</a>
+                    <a href="#accesorios">Accesorios H/M</a>
+                    <a href="#hombre">Hombre</a>
+                    <a href="#mujer">Mujer</a>
+                </div>
+            </div>
+            <a href="AcercaNosotros.jsp">Acerca de nosotros</a>
+        </div>
+    </nav>
+    
+<body>
+    <header class="encabezado">
+        <div class="buscar">
+            <img src="img/lupa.png" alt="Buscar" class="icono-lupa">
+            <input type="text" id="nombre" placeholder=" " required />
+            <label for="nombre">Buscar</label>
+        </div>
+</header>
+
+
+    <div id="destacado"><h2 class="destacado">DESTACADO</h2></div>
+
+    <div class="stock">
+    <div class="imgStock">
+        <img src='img/PDiamante.jpg' alt="Portada del Producto" />
+    </div>
+    <div class="temaProducto">
+        <h2 class="productoTitulo">Pulsera de Diamantes</h2>
+        <p class="descripcionProducto">
+            Elegante y sofisticada, esta pulsera está adornada con diamantes que brillan con cada movimiento. Ideal para ocasiones especiales o para destacar en cualquier evento.
+        </p>
+        <div class="infoProducto">
+            <p>Precio: Q 7,500.00</p>
+            <p>Stock: 3</p>
+        </div>
+        <button class="btnComprar">Comprar ahora</button>
+        </div>
+    </div>
+
+    <div class="stock">
+        <div class="imgStock">
+        <img src="img/APlatino.jpg" alt="Portada del producto" />
+        </div>
+        <div class="temaProducto">
+        <h2 class="productoTitulo">Anillo de Platino</h2>
+        <p class="descripcionProducto">
+            Una joya fina elaborada en platino puro, con un diseño moderno y llamativo. Perfecto para regalar o simbolizar un compromiso duradero.
+        </p>
+        <div class="infoProducto">
+            <p>Precio: Q 9,500.00</p>
+            <p>Stock: 2</p>
+        </div>
+        <button class="btnComprar">Comprar ahora</button>
+        </div>
+    </div>
+
+    <div class="stock">
+        <div class="imgStock">
+        <img src="img/BChannelClassic.jpg" alt="Portada del producto" />
+        </div>
+        <div class="temaProducto">
+        <h2 class="productoTitulo">Bolso Channel Classic</h2>
+        <p class="descripcionProducto">
+            Ícono de la moda, este bolso combina estilo atemporal y lujo. Su diseño clásico lo convierte en una pieza imprescindible en cualquier colección de moda.
+        </p>
+        <div class="infoProducto">
+            <p>Precio: Q 12,000.00</p>
+            <p>Stock: 1</p>
+        </div>
+        <button class="btnComprar">Comprar ahora</button>
+        </div>
+    </div>
+
+    <div class="stock">
+        <div class="imgStock">
+        <img src="img/HommeElegance.jpg" alt="Portada del producto" />
+        </div>
+        <div class="temaProducto">
+        <h2 class="productoTitulo">Perfume Homme Intense</h2>
+        <p class="descripcionProducto">
+            Una fragancia masculina con notas de madera, especias y ámbar. Ideal para hombres seguros de sí mismos que buscan dejar una impresión fuerte y duradera, tanto de día como de noche.
+        </p>
+        <div class="infoProducto">
+            <p>Precio: Q 2,800.00</p>
+            <p>Stock: 5</p>
+        </div>
+        <button class="btnComprar">Comprar ahora</button>
+        </div>
+    </div>
+
+    <div class="stock">
+        <div class="imgStock">
+        <img src="img/FElegance.jpg" alt="Portada del producto" />
+        </div>
+        <div class="temaProducto">
+        <h2 class="productoTitulo">Perfume Femme Elegance</h2>
+        <p class="descripcionProducto">
+            Aromas florales y frutales se combinan en esta fragancia femenina, fresca y sofisticada. Perfecta para mujeres elegantes que desean destacar con un toque de delicadeza y estilo.
+        </p>
+        <div class="infoProducto">
+            <p>Precio: Q 3,200.00</p>
+            <p>Stock: 5</p>
+        </div>
+        <button class="btnComprar">Comprar ahora</button>
+        </div>
+    </div>
+
+    <!-- Accesorios de Hombre y Mujer -->
+    <section class="productosMeh">
+    <h2 class="categoria" id="accesorios">Accesorios para Hombre y Mujer</h2>
+    <div class="productosHz">
+        <div class="producto">
+            <div class="imgProducto"><img class="imgProducto" src="img/CollarPlata.jpg" alt="" /></div>
+            <p class="tituloProducto">Collar de Plata</p>
+            <p class="marcaProducto">Joyas Elegance</p>
+            <span class="etiqueta">Disponible</span>
+            <p class="precio">Q. 350.00</p>
+            <button class="btnComp">Comprar</button>
+        </div>
+        <div class="producto">
+            <div class="imgProducto"><img class="imgProducto" src="img/RelojRolex.jpg" alt="  "></div>
+            <p class="tituloProducto">Reloj Clásico</p>
+            <p class="marcaProducto">Rolex</p>
+            <span class="etiqueta">Disponible</span>
+            <p class="precio">Q. 1,800.00</p>
+            <button class="btnComp">Comprar</button>
+        </div>
+        <div class="producto">
+            <div class="imgProducto"><img class="imgProducto" src="img/AretesOro.jpg"  alt="" /></div>
+            <p class="tituloProducto">Aretes de Oro</p>
+            <p class="marcaProducto">Golden Shine</p>
+            <span class="etiqueta">Disponible</span>
+            <p class="precio">Q. 750.00</p>
+            <button class="btnComp">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <div class="imgProducto"><img class="imgProducto" src="img/CinturonCuero.jpg" alt="" /></div>
+            <p class="tituloProducto">Cinturón de Cuero</p>
+            <p class="marcaProducto">Urban Man</p>
+            <span class="etiqueta">Disponible</span>
+            <p class="precio">Q. 220.00</p>
+            <button class="btnComp">Comprar</button>
+        </div>
+        <div class="producto">
+            <div class="imgProducto"><img class="imgProducto" src="img/CarteraCuero.jpg" alt=""></div>
+            <p class="tituloProducto">Cartera de Cuero</p>
+            <p class="marcaProducto">Urban Man</p>
+            <span class="etiqueta">Disponible</span>
+            <p class="precio">Q. 300.00</p>
+            <button class="btnComp">Comprar</button>
+        </div>
+        <div class="producto">
+            <div class="imgProducto"><img class="imgProducto" src="img/AnilloOro.jpg" alt="" /></div>
+            <p class="tituloProducto">Anillo de Oro 14K</p>
+            <p class="marcaProducto">Golden Elegance</p>
+            <span class="etiqueta">Disponible</span>
+            <p class="precio">Q. 1,800.00</p>
+            <button class="btnComp">Comprar</button>
+        </div>
+
+        <!-- Trabaja Fiore -->
+        <div class="producto">
+            <div class="imgProducto"><img class="imgProducto" src="img/PulseraDeCuero.png" alt="" /></div>
+                <p class="tituloProducto">Pulseras de Cuero</p>
+                <p class="marcaProducto">Montblanc</p>
+                <span class="etiqueta">Disponible</span>
+                <p class="precio">Q. 380.00</p>
+                    <button class="btnComp">Comprar</button>
+        </div>
+        <div class="producto">
+            <div class="imgProducto"><img class="imgProducto" src="img/LentesDeSol.png" alt=""></div>
+                <p class="tituloProducto">Lentes de Sol</p>
+                <p class="marcaProducto">Prada</p>
+                <span class="etiqueta">Disponible</span>
+                <p class="precio">Q. 720.00</p>
+                <button class="btnComp">Comprar</button>
+        </div>
+        <div class="producto">
+            <div class="imgProducto"><img class="imgProducto" src="img/BolsoPequeño.png" alt="" /></div>
+                <p class="tituloProducto">Bolso Pequeño</p>
+                <p class="marcaProducto">Michael Kors</p>
+                <span class="etiqueta">Disponible</span>
+                <p class="precio">Q. 1,000.00</p>
+                <button class="btnComp">Comprar</button>
+        </div>
+    </section>
+    <!-- Perfumes de Hombre -->
+    <section class="productosMehH">
+        <h2 class="categoriaH" id ="hombre">Perfumes de Hombre</h2>
+        <div class="productosHzH">
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/SauvageDior.jpg" alt="" /></div>
+            <p class="tituloProductoH">Dior Sauvage</p>
+            <p class="marcaProductoH">Dior</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1500.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/Bleu de Chanel.jpg" alt=""></div>
+            <p class="tituloProductoH">Bleu de Chanel</p>
+            <p class="marcaProductoH">Chanel</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,250.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/Acqua di Giò.jpg" alt="" /></div>
+            <p class="tituloProductoH">Acqua di Giò</p>
+            <p class="marcaProductoH">Giorgio Armani</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,400.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/1 Million.jpg" alt=""></div>
+            <p class="tituloProductoH">1 Million</p>
+            <p class="marcaProductoH">Paco Rabanne</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,200.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/Le Male.jpg" alt="" /></div>
+            <p class="tituloProductoH">Le Male</p>
+            <p class="marcaProductoH">Jean Paul Gaultier</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,100.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/Terre d’Hermès.jpg" alt=""></div>
+            <p class="tituloProductoH">Terre d’Hermès</p>
+            <p class="marcaProductoH">Hermès</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,550.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/Aventus.jpg" alt="" /></div>
+            <p class="tituloProductoH">Aventus</p>
+            <p class="marcaProductoH">Creed</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 3,500.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/Boss Bottled.jpg" alt=""></div>
+            <p class="tituloProductoH">Boss Bottled</p>
+            <p class="marcaProductoH">Hugo Boss</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,300.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+
+        <!-- Trabaja Fiore -->
+    <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/FAHRENHEIT.png" alt="" /></div>
+            <p class="tituloProductoH">Fahrenheit</p>
+            <p class="marcaProductoH">Dior</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,350.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/INVICTUS.png" alt=""></div>
+            <p class="tituloProductoH">Invictus</p>
+            <p class="marcaProductoH">Paco Rabanne</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,250.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/EXPLORER.png" alt="" /></div>
+            <p class="tituloProductoH">Explorer</p>
+            <p class="marcaProductoH">Montblanc</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,400.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+        <div class="productoH">
+            <div class="imgProductoH"><img class="imgProductoH" src="img/PUREXS.png" alt=""></div>
+            <p class="tituloProductoH">Pure XS</p>
+            <p class="marcaProductoH">Paco Rabanne</p>
+            <span class="etiquetaH">Disponible</span>
+            <p class="precioH">Q. 1,200.00</p>
+            <button class="btnCompH">Comprar</button>
+        </div>
+    </section>
+        
+    <!-- Perfumes de Mujer -->
+    <section class="productosMehM">
+        <h2 class="categoriaM" id = "mujer">Perfumes de Mujer</h2>
+        <div class="productosHzM">
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/La Vie Est Belle.jpg" alt="" /></div>
+            <p class="tituloProductoM">La Vie Est Belle</p>
+            <p class="marcaProductoM">Lancôme</p>
+            <span class="etiquetaM">Disponible</span>
+            <p class="precioM">Q. 1,450.00</p>
+            <button class="btnCompM">Comprar</button>
+        </div>
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/J’adore.jpg "alt=""></div>
+            <p class="tituloProductoM">J’adore</p>
+            <p class="marcaProductoM">Dior</p>
+            <span class="etiquetaM">Disponible</span>
+            <p class="precioM">Q. 1,600.00</p>
+            <button class="btnCompM">Comprar</button>
+        </div>
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/Coco Mademoiselle.jpg" alt="" /></div>
+            <p class="tituloProductoM">Coco Mademoiselle</p>
+            <p class="marcaProductoM">Chanel</p>
+            <span class="etiquetaM">Disponible</span>
+            <p class="precioM">Q. 1,550.00</p>
+            <button class="btnCompM">Comprar</button>
+        </div>
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/Black Opium.jpg" alt=""></div>
+            <p class="tituloProductoM">Black Opium</p>
+            <p class="marcaProductoM">Yves Saint Laurent</p>
+            <span class="etiquetaM">Disponible</span>
+            <p class="precioM">Q. 1,480.00</p>
+            <button class="btnCompM">Comprar</button>
+        </div>
+
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/Light Blue.jpg" alt="" /></div>
+            <p class="tituloProductoM">Light Blue</p>
+            <p class="marcaProductoM">Dolce & Gabbana</p>
+            <span class="etiquetaM">Disponible</span>
+            <p class="precioM">Q. 1,350.00</p>
+            <button class="btnCompM">Comprar</button>
+        </div>
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/Good Girl.jpg"alt=""></div>
+            <p class="tituloProductoM">Good Girl</p>
+            <p class="marcaProductoM">Carolina Herrera</p>
+            <span class="etiquetaM">Disponible</span>
+            <p class="precioM">Q. 1,500.00</p>
+            <button class="btnCompM">Comprar</button>
+        </div>
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/Mon Guerlain.jpg" alt="" /></div>
+            <p class="tituloProductoM">Mon Guerlain</p>
+            <p class="marcaProductoM">Guerlain</p>
+            <span class="etiquetaM">Disponible</span>
+            <p class="precioM">Q. 1,520.00</p>
+            <button class="btnCompM">Comprar</button>
+        </div>
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/Flowerbomb.jpg" alt=""></div>
+            <p class="tituloProductoM">Flowerbomb</p>
+            <p class="marcaProductoM">Viktor & Rolf</p>
+            <span class="etiquetaM">Disponible</span>
+            <p class="precioM">Q. 1,600.00</p>
+            <button class="btnCompM">Comprar</button>
+        </div>
+
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/BRIGHTCRYSTAL.png" alt="" /></div>
+                <p class="tituloProductoM">Bright Crystal</p>
+                <p class="marcaProductoM">Versace</p>
+                <span class="etiquetaM">Disponible</span>
+                <p class="precioM">Q. 1,300.00</p>
+                <button class="btnCompM">Comprar</button>
+        </div>
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/SI.png"alt=""></div>
+                <p class="tituloProductoM">Si</p>
+                <p class="marcaProductoM">Giorgio Armani</p>
+                <span class="etiquetaM">Disponible</span>
+                <p class="precioM">Q. 1,450.00</p>
+                <button class="btnCompM">Comprar</button>
+        </div>
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/ANGEL.png" alt="" /></div>
+                <p class="tituloProductoM">Angel</p>
+                <p class="marcaProductoM">Thierry Mugler</p>
+                <span class="etiquetaM">Disponible</span>
+                <p class="precioM">Q. 1,500.00</p>
+                <button class="btnCompM">Comprar</button>
+        </div>
+        <div class="productoM">
+            <div class="imgProductoM"><img class="imgProductoM" src="img/EUPHORIA.png" alt=""></div>
+                <p class="tituloProductoM">Euphoria</p>
+                <p class="marcaProductoM">Calvin Klein</p>
+                <span class="etiquetaM">Disponible</span>
+                <p class="precioM">Q. 1,400.00</p>
+                <button class="btnCompM">Comprar</button>
+        </div>
+    </section>
+</body>
+</html>
