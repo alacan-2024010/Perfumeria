@@ -1,5 +1,6 @@
 package com.alanlacan.dominio;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Scanner;
 import javax.persistence.*;
@@ -17,27 +18,26 @@ public class Producto {
     @Column
     private String descripcionProducto;
     @Column
-    private double precioProducto;
+    private BigDecimal precioProducto;
     @Column
     private int stock;
-    
-    @OneToMany
-    @Column
-    private int codigoCategoria;
-    @OneToMany
-    @Column
-    private int codigoProveedor;
+
+    @ManyToOne
+    @JoinColumn(name = "codigoCategoria")
+    private Categoria categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "codigoProveedor")
+    private Proveedor proveedor;
 
     public Producto() {
     }
 
-    public Producto(String nombreProducto, String descripcionProducto, double precioProducto, int stock, int codigoCategoria, int codigoProveedor) {
+    public Producto(String nombreProducto, String descripcionProducto, BigDecimal precioProducto, int stock, int codigoCategoria, int codigoProveedor) {
         this.nombreProducto = nombreProducto;
         this.descripcionProducto = descripcionProducto;
         this.precioProducto = precioProducto;
         this.stock = stock;
-        this.codigoCategoria = codigoCategoria;
-        this.codigoProveedor = codigoProveedor;
     }
 
     public int getCodigoProducto() {
@@ -64,11 +64,11 @@ public class Producto {
         this.descripcionProducto = descripcionProducto;
     }
 
-    public double getPrecioProducto() {
+    public BigDecimal getPrecioProducto() {
         return precioProducto;
     }
 
-    public void setPrecioProducto(double precioProducto) {
+    public void setPrecioProducto(BigDecimal precioProducto) {
         this.precioProducto = precioProducto;
     }
 
@@ -80,22 +80,6 @@ public class Producto {
         this.stock = stock;
     }
 
-    public int getCodigoCategoria() {
-        return codigoCategoria;
-    }
-
-    public void setCodigoCategoria(int codigoCategoria) {
-        this.codigoCategoria = codigoCategoria;
-    }
-
-    public int getCodigoProveedor() {
-        return codigoProveedor;
-    }
-
-    public void setCodigoProveedor(int codigoProveedor) {
-        this.codigoProveedor = codigoProveedor;
-    }
-
     @Override
     public String toString() {
         return "Producto{"
@@ -103,9 +87,7 @@ public class Producto {
                 + ", nombreProducto=" + nombreProducto
                 + ", descripcionProducto=" + descripcionProducto
                 + ", precioProducto=" + precioProducto
-                + ", stock=" + stock
-                + ", codigoCategoria=" + codigoCategoria
-                + ", codigoProveedor=" + codigoProveedor + '}';
+                + ", stock=" + stock + '}';
     }
 
     public void menuProducto() {
@@ -132,7 +114,7 @@ public class Producto {
                     System.out.println("Ingrese la descripción:");
                     String descripcionProd = leer.nextLine();
                     System.out.println("Ingrese el precio:");
-                    double precioProd = leer.nextDouble();
+                    BigDecimal precioProd = leer.nextBigDecimal();
                     System.out.println("Ingrese el stock:");
                     int stock = leer.nextInt();
                     System.out.println("Ingrese el código de la categoría:");
@@ -140,12 +122,16 @@ public class Producto {
                     System.out.println("Ingrese el código del proveedor:");
                     int codProveedor = leer.nextInt();
 
+                    Categoria categoria = em.find(Categoria.class, codCategoria);
+                    Proveedor proveedor = em.find(Proveedor.class, codProveedor);
                     Producto nuevo = new Producto(nombreProd, descripcionProd, precioProd, stock, codCategoria, codProveedor);
+                   
                     em.getTransaction().begin();
                     em.persist(nuevo);
                     em.getTransaction().commit();
                     System.out.println("Producto agregado correctamente.");
                     break;
+
                 case 2:
                     System.out.println("Ingrese el código del producto a buscar:");
                     int codigoProd = leer.nextInt();
@@ -167,13 +153,9 @@ public class Producto {
                         System.out.println("Ingrese nueva descripción:");
                         modificarProd.setDescripcionProducto(leer.nextLine());
                         System.out.println("Ingrese nuevo precio:");
-                        modificarProd.setPrecioProducto(leer.nextDouble());
+                        modificarProd.setPrecioProducto(leer.nextBigDecimal());
                         System.out.println("Ingrese nuevo stock:");
                         modificarProd.setStock(leer.nextInt());
-                        System.out.println("Ingrese nuevo código de categoría:");
-                        modificarProd.setCodigoCategoria(leer.nextInt());
-                        System.out.println("Ingrese nuevo código de proveedor:");
-                        modificarProd.setCodigoProveedor(leer.nextInt());
 
                         em.getTransaction().begin();
                         em.merge(modificarProd);
