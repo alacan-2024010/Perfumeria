@@ -1,0 +1,7 @@
+target/ 
+nbproject/private/ 
+build/ 
+*.log 
+*.tmp 
+.DS_Store 
+Thumbs.db 
