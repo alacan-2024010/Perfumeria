@@ -1,5 +1,6 @@
 
 package com.alanlacan.system;
+import com.alanlacan.dominio.DetalleVenta;
 import com.alanlacan.dominio.Cliente;
 import com.alanlacan.dominio.Proveedor;
 import com.alanlacan.dominio.Categoria;
@@ -20,6 +21,7 @@ public class Principal {
         Producto prod = new Producto();
         Empleado e = new Empleado();
         Venta v = new Venta();
+        DetalleVenta dv = new DetalleVenta();
         
         do {            
             System.out.println("Menu de todos las Entidades:");
@@ -29,6 +31,7 @@ public class Principal {
             System.out.println("4. Productos");
             System.out.println("5. Empleados");
             System.out.println("6. Venta");
+            System.out.println("7. Detalle Venta");
             System.out.println("0. Salir");
             opc = leer.nextInt();
             
@@ -50,6 +53,10 @@ public class Principal {
                 break;
             case 6:
                 v.menuVentas();
+                    break;
+            case 7:
+                dv.menuDetalleVenta();
+                    break;
             case 0:
                 System.out.println("Has salido del menu de las Entidades");
             default:
