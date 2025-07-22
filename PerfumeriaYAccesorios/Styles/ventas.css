@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('fondo.jpg'); /* Puedes reemplazar con tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #000;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.formulario {
+    width: 40%;
+    padding: 2rem;
+    background-color: #2f2f2f;
+    border-radius: 15px;
+    color: #d6b46a;
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.formulario input,
+.formulario select {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    background-color: #d6b46a;
+    border: none;
+    padding: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e5c57a;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+}
+
+.tabla {
+    width: 55%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+th {
+    background-color: #d6b46a;
+    color: black;
+    padding: 0.8rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 0.6rem;
+    border-bottom: 1px solid #888;
+}
