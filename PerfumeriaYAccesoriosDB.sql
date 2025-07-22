@@ -142,6 +142,7 @@ Delimiter $$
 		values (nombreCliente, apellidoCliente, emailCliente, contrasenia);
 	end $$
 Delimiter ;
+call sp_AgregarCliente('1', '1', "admin@gmail.com", 'admin123');
 call sp_AgregarCliente('Alan', 'Lacán', 'alan@gmail.com', '58319705');
 call sp_AgregarCliente('Andrea', 'López', 'andrea@hotmail.com', '55678901');
 call sp_AgregarCliente('Fernando', 'Castillo', 'fernando@gmail.com', '44781290');
