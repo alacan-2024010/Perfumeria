@@ -1,6 +1,8 @@
 
 package com.alanlacan.dominio;
-import java.util.HashSet;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 import javax.persistence.Column;
@@ -24,9 +26,9 @@ public class Venta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigoVenta ;
     @Column
-    private String fecha;
+    private LocalDateTime  fecha;
     @Column
-    private int total;
+    private BigDecimal total;
     @ManyToOne
     @JoinColumn(name = "codigoCliente")
     private Cliente cliente;
@@ -39,7 +41,7 @@ public class Venta {
     public Venta() {
     }
 
-    public Venta(String fecha, int total, int codigoCliente, int codigoEmpleado) {
+    public Venta(LocalDateTime  fecha, BigDecimal total, int codigoCliente, int codigoEmpleado) {
         this.codigoVenta = codigoVenta;
         this.fecha = fecha;
         this.total = total;
@@ -55,19 +57,19 @@ public class Venta {
         this.codigoVenta = codigoVenta;
     }
 
-    public String getFecha() {
+    public LocalDateTime  getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(LocalDateTime  fecha) {
         this.fecha = fecha;
     }
 
-    public int getTotal() {
+    public BigDecimal getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(BigDecimal total) {
         this.total = total;
     }
 
@@ -101,7 +103,7 @@ public class Venta {
         EntityManager em = emf.createEntityManager();
         int op;
         do {
-            System.out.println("Menu De Empleados");
+            System.out.println("Menu De Ventas");
             System.out.println("1. Agregar Ventas");
             System.out.println("2. Buscar Ventas");
             System.out.println("3. Actualizar Ventas");
@@ -111,13 +113,15 @@ public class Venta {
             op = leer.nextInt();
             leer.nextLine();
             
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             switch (op) {
                 case 1:
                     System.out.println("Ingresa los datos de la Nueva Venta " + "\n");
                     System.out.print("Fecha de la venta: ");
-                    String fecha = leer.nextLine();
+                    String fech= leer.nextLine();
+                    LocalDateTime fecha = LocalDateTime.parse(fech, formatter);
                     System.out.print("Ingrese el nuevo total: ");
-                    int total = leer.nextInt();
+                    BigDecimal total = leer.nextBigDecimal();
                     System.out.print("Ingrese el codigo Cliente : ");
                     int codCliente = leer.nextInt();
                     System.out.println("Ingrese el codigo Empleado");
@@ -148,10 +152,12 @@ public class Venta {
                     Venta actualizarE = em.find(Venta.class, codigoVenta);
                     if (actualizarE != null) {
                         System.out.print("Fecha Nuevo: ");
-                        actualizarE.setFecha(leer.nextLine());
+                        fech = leer.nextLine();
+                        LocalDateTime fechaNueva = LocalDateTime.parse(fech, formatter);
+                        actualizarE.setFecha(fechaNueva);
                     
                         System.out.print("Total Nuevo: ");
-                        actualizarE.setTotal(leer.nextInt());
+                        actualizarE.setTotal(leer.nextBigDecimal());
                         
                         em.getTransaction().begin();
                         em.merge(actualizarE);
