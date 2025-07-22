@@ -9,6 +9,7 @@ import com.alanlacan.dominio.Empleado;
 import com.alanlacan.dominio.Venta;
 import com.alanlacan.dominio.Factura;
 import com.alanlacan.dominio.Compra;
+import com.alanlacan.dominio.DetalleCompra;
 import java.util.Scanner;
 
 public class Principal {
@@ -25,6 +26,7 @@ public class Principal {
         DetalleVenta dv = new DetalleVenta();
         Factura f = new Factura();
         Compra comp = new Compra();
+        DetalleCompra dc = new DetalleCompra();
         
         do {            
             System.out.println("\n=== MENÚ PRINCIPAL - SISTEMA DE GESTIÓN ===");
@@ -69,6 +71,9 @@ public class Principal {
                     break;
                 case 9:
                     comp.menuCompra();
+                    break;
+                case 10:
+                    dc.menuDetalleCompra();
                     break;
                 case 0:
                     System.out.println("¡Gracias por usar el Sistema de Gestión!");
