@@ -24,6 +24,8 @@
             <li><a href="ventas.jsp">Ventas</a></li>
             <li><a href="DetalleVentajsphtml">Detalle Ventas</a></li>
             <li><a href="">Facturas</a></li>
+            <li><a href="venta.jsp">Ventas</a></li>
+            <li><a href="detalleVenta.jsp">Detalle Ventas</a></li>
             <li><a href="compras.jsp">Compras</a></li>
             <li><a href="detalleCompra.jsp">Detalle Compras</a></li>
             <li><a href="index.html">Cerrar Sesión</a></li>

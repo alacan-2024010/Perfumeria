@@ -36,6 +36,7 @@ nav .logo {
 
 .contenedor-principal {
     display: flex;
+    justify-content: space-between; /* Esto asegura que el espacio se distribuya entre el formulario y la tabla */
     width: 90%;
     max-width: 1400px;
     height: 80vh;
@@ -50,7 +51,7 @@ nav .logo {
 
 
 .panel-formulario {
-    flex: 1;
+    flex: 1; /* Esto asegura que el panel de formulario ocupe una parte del espacio */
     padding: 30px;
     color: white;
     display: flex;
@@ -87,42 +88,75 @@ nav .logo {
     gap: 10px;
 }
 
-
-.botones button {
-    flex: 1 1 40%;
-    padding: 10px 20px;
-    background-color: #b68d40;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
+/* From Uiverse.io by Peary74 */
+button {
+    font-family: inherit;
+    font-size: 20px;
+    background: #212121;
     color: white;
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
+    fill: rgb(155, 153, 153);
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    font-weight: 1000;
+   
+    flex: 1 1 40%;
+  }
+ 
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+ 
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+ 
+  button:hover {
+    background: #000;
+  }
+ 
+  button:hover .svg-wrapper {
+    transform: scale(1.25);
+    transition: 0.5s linear;
+  }
+ 
+  button:hover svg {
+    transform: translateX(3.5em) scale(1.2);
+    fill: #fff;
+  }
+ 
+  button:hover .iconoEliminar{
+    fill: red;
+  }
+ 
+  button:hover span {
+    opacity: 0;
+    transition: 0.5s linear;
+  }
+ 
+  button:active {
+    transform: scale(0.95);
+  }
+ 
+  .Eliminar:hover{
+    background-color: rgb(68, 8, 8);
+  }
 
-.botones button:hover {
-    background-color: #ffaa33;
-    color: #111;
-    transform: scale(1.05);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-}
-
-.botones .eliminar {
-    background-color: #ff1900; 
-}
-
-.botones .eliminar:hover {
-    background-color: #c01604; 
-}
-
-.panel-tabla {
-    flex: 1.5;
+  .panel-tabla {
+    flex: 1.5; /* Hacemos que el panel de la tabla ocupe más espacio que el formulario */
     background-color: rgba(255, 255, 255, 0.1);
     padding: 30px;
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Asegura que la tabla no desborde el panel */
 }
 
 .tabla-contenedor {
@@ -164,4 +198,49 @@ nav .logo {
     user-select: none;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     transform: translateY(150%);
+}
+
+/* Estilos de la ventana emergente */
+.modal {
+    display: none; /* Inicialmente oculta */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté encima de todo */
+}
+
+/* Contenido de la ventana emergente */
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.281);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 350px;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 20px;
+    width: 340px;
+    background-color: #d4b067d3;
+    color: rgba(255, 255, 255, 0.76);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;    
+}
+
+.modal-content button:hover {
+    background-color: #e41c4ebd;
 }
