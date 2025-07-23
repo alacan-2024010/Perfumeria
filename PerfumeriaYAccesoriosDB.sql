@@ -9,6 +9,7 @@ create table Clientes (
 	apellidoCliente varchar(100) not null,
 	emailCliente varchar(100),
     contrasenia varchar(100),
+	imagen varchar(100),
 	primary key PK_codigoCliente(codigoCliente)
 );
 
@@ -136,34 +137,38 @@ Delimiter $$
 		in nombreCliente varchar(100),
 		in apellidoCliente varchar(100),
 		in emailCliente varchar(100),
-		in contrasenia varchar(100))
+		in contrasenia varchar(100),
+        in imagen varchar(100))
 	begin
-		insert into Clientes (nombreCliente, apellidoCliente , emailCliente, contrasenia)
-		values (nombreCliente, apellidoCliente, emailCliente, contrasenia);
+		if imagen is  null or imagen= ''THEN
+			set imagen = '../Images/usuarioPredeterminado.png';
+		end if;
+		insert into Clientes (nombreCliente, apellidoCliente , emailCliente, contrasenia, imagen)
+		values (nombreCliente, apellidoCliente, emailCliente, contrasenia, imagen);
 	end $$
 Delimiter ;
-call sp_AgregarCliente('1', '1', "admin@gmail.com", 'admin123');
-call sp_AgregarCliente('Alan', 'Lacán', 'alan@gmail.com', '58319705');
-call sp_AgregarCliente('Andrea', 'López', 'andrea@hotmail.com', '55678901');
-call sp_AgregarCliente('Fernando', 'Castillo', 'fernando@gmail.com', '44781290');
-call sp_AgregarCliente('Patricia', 'Reyes', 'patricia@hotmail.com', '46789012');
-call sp_AgregarCliente('Jorge', 'Chacón', 'jorge@gmail.com', '42345678');
-call sp_AgregarCliente('Daniela', 'Pérez', 'daniela@gmail.com', '43901234');
-call sp_AgregarCliente('Ricardo', 'Flores', 'ricardo@hotmail.com', '45781234');
-call sp_AgregarCliente('Karla', 'Belteton', 'karla@hotmail.com', '46890123');
-call sp_AgregarCliente('Gabriel', 'Ortiz', 'gabriel@hotmail.com', '42908765');
-call sp_AgregarCliente('Claudia', 'Navarro', 'claudia@gmail.com', '47890123');
-call sp_AgregarCliente('Brenda', 'Flores', 'brenda@gmail.com', '56357794');
-call sp_AgregarCliente('Gladys', 'Belteton', 'gladys@hotmail.com', '22883505');
-call sp_AgregarCliente('Astrid', 'Lacán', 'astrid@hotmail.com', '59880531');
-call sp_AgregarCliente('Francisco', 'Lacán', 'francisco@gmail.com', '42116602');
-call sp_AgregarCliente('Julio', 'Flores', 'julio@gmail.com', '54078932');
+call sp_AgregarCliente('1', '1', "admin@gmail.com", 'admin123','../Images/UsuarioAdmin');
+call sp_AgregarCliente('Alan', 'Lacán', 'alan@gmail.com', '58319705',null);
+call sp_AgregarCliente('Andrea', 'López', 'andrea@hotmail.com', '55678901',null);
+call sp_AgregarCliente('Fernando', 'Castillo', 'fernando@gmail.com', '44781290',null);
+call sp_AgregarCliente('Patricia', 'Reyes', 'patricia@hotmail.com', '46789012',null);
+call sp_AgregarCliente('Jorge', 'Chacón', 'jorge@gmail.com', '42345678',null);
+call sp_AgregarCliente('Daniela', 'Pérez', 'daniela@gmail.com', '43901234',null);
+call sp_AgregarCliente('Ricardo', 'Flores', 'ricardo@hotmail.com', '45781234',null);
+call sp_AgregarCliente('Karla', 'Belteton', 'karla@hotmail.com', '46890123',null);
+call sp_AgregarCliente('Gabriel', 'Ortiz', 'gabriel@hotmail.com', '42908765',null);
+call sp_AgregarCliente('Claudia', 'Navarro', 'claudia@gmail.com', '47890123',null);
+call sp_AgregarCliente('Brenda', 'Flores', 'brenda@gmail.com', '56357794',null);
+call sp_AgregarCliente('Gladys', 'Belteton', 'gladys@hotmail.com', '22883505',null);
+call sp_AgregarCliente('Astrid', 'Lacán', 'astrid@hotmail.com', '59880531',null);
+call sp_AgregarCliente('Francisco', 'Lacán', 'francisco@gmail.com', '42116602',null);
+call sp_AgregarCliente('Julio', 'Flores', 'julio@gmail.com', '54078932',null);
 
 -- Listar Clientes
 Delimiter $$
 	create procedure sp_ListarClientes()
 		begin
-			select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia
+			select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia,imagen
 			from Clientes;
 		end $$
 Delimiter ;
@@ -183,7 +188,7 @@ Delimiter ;
 Delimiter $$
 	create procedure sp_BuscarCliente(in codigoC int)
 	begin
-		select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia from Clientes
+		select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia, imagen from Clientes
 			where codigoCliente = codigoC;
 	end $$
 Delimiter ;
@@ -196,17 +201,19 @@ Delimiter $$
 		in nombreC varchar(100),
 		in apellidoC varchar(100),
 		in emailC varchar(100),
-		in contr varchar(100))
+		in contr varchar(100),
+		in img varchar(100))
 	begin
 		update Clientes
 		set nombreCliente = nombreC,
 			apellidoCliente = apellidoC,
 			emailCliente = emailC,
-			contrasenia = contr
+			contrasenia = contr,
+			imagen = img
 		where codigoCliente = codigoC;
 	end $$
 Delimiter ;
-call sp_EditarCliente(3, 'Juan', 'Pérez', 'juan@gmail.com', '123456');
+call sp_EditarCliente(3, 'Juan', 'Pérez', 'juan@gmail.com', '123456',null);
 
 -- PROVEEDORES
 -- CRUD TRABAJADO POR Adrián
