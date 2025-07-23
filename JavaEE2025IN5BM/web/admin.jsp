@@ -30,6 +30,8 @@
             <li><a href="">Facturas</a></li>
             <li><a href="">Compras</a></li>
             <li><a href="detalleCompra.jsp">Detalle Compras</a></li>
+            <li><a href="compras.jsp">Compras</a></li>
+            <li><a href="">Detalle Compras</a></li>
             <li><a href="index.jsp">Cerrar Sesión</a></li>
         </ul>
     </nav>
