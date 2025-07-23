@@ -21,11 +21,12 @@
             <li><a href="proveedores.jsp">Proveedores</a></li>
             <li><a href="producto.jsp">Productos</a></li>
             <li><a href="empleado.jsp">Empleados</a></li>
-            <li><a href="venta.jsp">Ventas</a></li>
-            <li><a href="DetalleVenta.jsp">Detalle Ventas</a></li>
+            <li><a href="ventas.jsp">Ventas</a></li>
+            <li><a href="DetalleVentajsphtml">Detalle Ventas</a></li>
+            <li><a href="">Facturas</a></li>
             <li><a href="compras.jsp">Compras</a></li>
             <li><a href="detalleCompra.jsp">Detalle Compras</a></li>
-            <li><a href="index.jsp">Cerrar Sesión</a></li>
+            <li><a href="index.html">Cerrar Sesión</a></li>
         </ul>
     </nav>
 
