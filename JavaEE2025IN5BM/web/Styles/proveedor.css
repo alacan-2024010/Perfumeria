@@ -4,6 +4,7 @@
     --gris: #f0f0f0;
     --borde: #444;
     --hover: #b8860b;
+    --transicion: all 0.3s ease;
 }
 
 * {
@@ -21,21 +22,23 @@ body {
     background-position: center;
     color: #fefefe;
     min-height: 100vh;
+    background-attachment: fixed;
 }
 
-/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
-    background: #000;
+    background: rgba(0, 0, 0, 0.9);
     color: white;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    transition: var(--transicion);
 }
 
 nav .logo {
@@ -45,24 +48,33 @@ nav .logo {
     font-weight: 800;
     letter-spacing: 2px;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    transition: var(--transicion);
 }
 
-/* CONTENEDOR PRINCIPAL */
+nav .logo:hover {
+    transform: scale(1.05);
+}
+
 .contenedor-principal {
     display: flex;
     width: 90%;
     max-width: 1400px;
     height: 80vh;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(15px);
     border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     margin: 20px auto 0 auto;
     transform: translateY(0);
+    transition: var(--transicion);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* PANEL FORMULARIO */
+.contenedor-principal:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+}
+
 .panel-formulario {
     flex: 1;
     padding: 30px;
@@ -71,14 +83,27 @@ nav .logo {
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
-    color: white;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .panel-formulario h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: center;
     color: var(--dorado);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.panel-formulario h1:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--dorado);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .formulario {
@@ -88,71 +113,161 @@ nav .logo {
 }
 
 .formulario input {
-    padding: 12px;
+    padding: 15px;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
-    background-color: #e7e7e2;
+    background-color: rgba(231, 231, 226, 0.9);
     color: #111;
+    transition: var(--transicion);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* BOTONES */
+.formulario input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 176, 103, 0.5);
+    transform: translateY(-2px);
+    background-color: #ffffff;
+}
+
 .botones {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 10px;
 }
 
 .botones button {
     flex: 1 1 40%;
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: var(--dorado);
     border: none;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    color: white;
+    color: rgb(105, 68, 0);
     font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.botones button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%) skewX(-15deg);
+    transition: var(--transicion);
+    z-index: -1;
 }
 
 .botones button:hover {
     background-color: var(--hover);
     color: #111;
-    transform: scale(1.05);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.botones .eliminar {
-    background-color: #ff1900;
+.botones button:hover:after {
+    transform: translateX(100%) skewX(-15deg);
 }
 
-.botones .eliminar:hover {
-    background-color: #c01604;
+.botones button:active {
+    transform: translateY(1px);
 }
 
-/* PANEL TABLA */
+/* Estilo para el nuevo botón de eliminar */
+button.eliminar-nuevo {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #e62222;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+}
+
+button.eliminar-nuevo, button.eliminar-nuevo span {
+    transition: 200ms;
+}
+
+button.eliminar-nuevo .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+}
+
+button.eliminar-nuevo .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.eliminar-nuevo svg {
+    width: 15px;
+    fill: #eee;
+}
+
+button.eliminar-nuevo:hover {
+    background: #ff3636;
+}
+
+button.eliminar-nuevo:hover .text {
+    color: transparent;
+}
+
+button.eliminar-nuevo:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+button.eliminar-nuevo:focus {
+    outline: none;
+}
+
+button.eliminar-nuevo:active .icon svg {
+    transform: scale(0.8);
+}
+
 .panel-tabla {
     flex: 1.5;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 30px;
     display: flex;
     flex-direction: column;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .tabla-contenedor {
     overflow-y: auto;
     flex: 1;
     border-radius: 10px;
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 .tabla {
     width: 100%;
     border-collapse: collapse;
-    background-color: #ffffffcc;
+    background-color: rgba(255, 255, 255, 0.9);
     color: #111;
+    position: relative;
 }
 
 .tabla thead {
@@ -161,13 +276,24 @@ nav .logo {
     top: 0;
     z-index: 10;
     color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .tabla th, .tabla td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
     text-align: left;
-    white-space: nowrap;
+    transition: var(--transicion);
+}
+
+.tabla tr:hover {
+    background-color: rgba(212, 176, 103, 0.2);
+}
+
+.tabla th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .marca-interna {
@@ -180,4 +306,68 @@ nav .logo {
     user-select: none;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     transform: translateY(150%);
+    position: relative;
+    padding-top: 20px;
+}
+
+.marca-interna:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: var(--dorado);
+}
+
+/* Animación para el contenedor principal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenedor-principal {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Efecto de brillo para los botones */
+@keyframes shine {
+    from {
+        background-position: -100%;
+    }
+    to {
+        background-position: 100%;
+    }
+}
+
+.botones button:not(.eliminar-nuevo) {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    background-size: 200% 100%;
+    animation: shine 3s infinite;
+}
+
+/* Scrollbar personalizado */
+.tabla-contenedor::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tabla-contenedor::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.tabla-contenedor::-webkit-scrollbar-thumb {
+    background: var(--dorado);
+    border-radius: 10px;
+}
+
+.tabla-contenedor::-webkit-scrollbar-thumb:hover {
+    background: var(--hover);
 }

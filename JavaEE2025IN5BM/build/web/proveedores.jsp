@@ -30,12 +30,15 @@
                 <input type="text" id="direccion" placeholder="Dirección" />
                 <input type="text" id="celular" placeholder="Celular" />
                 <input type="email" id="correo" placeholder="Correo" />
+                
                 <div class="botones">
-                    <button>Agregar</button>
-                    <button>Actualizar</button>
-                    <button>Buscar</button>
-                    <button class="eliminar">Eliminar</button>
+                    <button class="agregar">Agregar</button>
+                    <button class="actualizar">Actualizar</button>
+                    <button class="buscar">Buscar</button>
+                    <!-- Botón de eliminar nuevo estilo -->
+                    <button class="ui-btn">Delete</button>
                 </div>
+                
                 <div class="marca-interna">
                     Essenza & Co.
                 </div>
