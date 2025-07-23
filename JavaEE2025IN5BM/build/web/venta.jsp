@@ -16,7 +16,7 @@
 <body>
 
     <header>
-        <h1>Essenza & Co.</h1>
+          <a href="admin.jsp" class="logo">Essenza & Co.</a>
     </header>
 
     <main class="contenedor">
@@ -24,21 +24,94 @@
         <div class="formulario">
             <h2>Gestión de Ventas</h2>
 
-            <input type="text" placeholder="ID de venta">
-            <input type="datetime-local" placeholder="Fecha">
-            <input type="text" placeholder="Total">
-            <select>
-                <option>ID Cliente</option>
-            </select>
-            <select>
-                <option>ID Empleado</option>
-            </select>
+<input class="venta-input" type="text" placeholder="ID de venta">
+<input class="venta-input" type="datetime-local" placeholder="Fecha">
+<input class="venta-input" type="text" placeholder="Total">
+<input class="venta-input" type="number" placeholder="ID Cliente">
+<input class="venta-input" type="number" placeholder="ID Empleado">
 
-            <div class="botones">
-                <button class="btn agregar">Agregar</button>
-                <button class="btn actualizar">Actualizar</button>
-                <button class="btn buscar">Buscar</button>
-                <button class="btn eliminar">Eliminar</button>
+
+
+                <div class="botones">
+<div class="boton-contenedor">
+  <button>
+    <div class="svg-wrapper-1">
+      <div class="svg-wrapper">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="30"
+          height="30"
+          class="icon"
+        >
+          <path
+            d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <span>Agregar</span>
+  </button>
+</div>
+
+            <!-- From Uiverse.io by vinodjangid07 --> 
+<button class="Btn">
+  Actualizar
+</button>
+               
+                <!-- Input de búsqueda estilizado -->
+            <div id="poda">
+            <div class="glow"></div>
+            <div class="darkBorderBg"></div>
+            <div class="white"></div>
+            <div class="border"></div>
+
+            <div id="main">
+                <input placeholder="Buscar venta..." type="text" name="buscar" class="inputBuscar" />
+                <div id="input-mask"></div>
+                <div id="pink-mask"></div>
+                <div class="filterBorder"></div>
+                <div id="filter-icon">
+                <svg preserveAspectRatio="none" height="27" width="50" viewBox="4.8 4.56 14.832 15.408" fill="none">
+                    <path d="M8.16 6.65002H15.83C16.47 6.65002 16.99 7.17002 16.99 7.81002V9.09002C16.99 9.56002 16.7 10.14 16.41 10.43L13.91 12.64C13.56 12.93 13.33 13.51 13.33 13.98V16.48C13.33 16.83 13.1 17.29 12.81 17.47L12 17.98C11.24 18.45 10.2 17.92 10.2 16.99V13.91C10.2 13.5 9.97 12.98 9.73 12.69L7.52 10.36C7.23 10.08 7 9.55002 7 9.20002V7.87002C7 7.17002 7.52 6.65002 8.16 6.65002Z"
+                        stroke="#d6d6e6"
+                        stroke-width="1"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                    </path>
+                </svg>
+                </div>
+                <div id="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" height="24" fill="none" class="feather feather-search">
+                    <circle stroke="url(#search)" r="8" cy="11" cx="11"></circle>
+                    <line stroke="url(#searchl)" y2="16.65" y1="22" x2="16.65" x1="22"></line>
+                    <defs>
+                    <linearGradient gradientTransform="rotate(50)" id="search">
+                        <stop stop-color="#f8e7f8" offset="0%"></stop>
+                        <stop stop-color="#b6a9b7" offset="50%"></stop>
+                    </linearGradient>
+                    <linearGradient id="searchl">
+                        <stop stop-color="#b6a9b7" offset="0%"></stop>
+                        <stop stop-color="#837484" offset="50%"></stop>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                </div>
+            </div>
+            </div>
+
+                <button class="button" title="Eliminar">
+                <svg viewBox="0 0 448 512" class="svgIcon" width="30" height="30">
+                    <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 
+                    32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 
+                    296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 
+                    17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 
+                    47.9 45H346.9c25.3 0 46.3-19.7 
+                    47.9-45L416 128z"></path>
+                </svg>
+                </button>
+
             </div>
 
             <footer>
@@ -66,4 +139,3 @@
 
 </body>
 </html>
-
