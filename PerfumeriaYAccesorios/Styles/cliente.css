@@ -161,24 +161,24 @@ nav .logo:hover {
 }
 
 .formulario input {
-    padding: 15px;
+    padding: 18px;
+    font-size: 1.1rem;
     border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    background-color: rgba(231, 231, 226, 0.9);
-    color: #111;
-    transition: var(--transicion);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #000000; /* Fondo negro sólido */
+    color: var(--text-color);
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
 }
 
 .formulario input:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(212, 176, 103, 0.5);
-    transform: translateY(-2px);
-    background-color: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(212, 176, 103, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(50, 50, 50, 0.8);
 }
-
 .botones {
     display: flex;
     flex-wrap: wrap;
