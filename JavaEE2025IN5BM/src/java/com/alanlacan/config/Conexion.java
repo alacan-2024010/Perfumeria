@@ -13,7 +13,7 @@ public class Conexion {
     public Connection Conexion(){
         try {
             Class.forName("com.mysql.jdbc.Drive");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/DB_PerfumeriaYAccesorios?useSSL=false", "quintom", "admin");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/DB_PerfumeriaYAccesorios?useSSL=false", "root", "admin");
         } catch (ClassNotFoundException | SQLException e) {
         }
         return conexion;
