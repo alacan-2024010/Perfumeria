@@ -1,24 +1,24 @@
-/* Variables opcionales si quieres usar colores reutilizables */
 :root {
     --dorado: #d4b067;
-    --rojo: #ff1900;
-    --rojo-hover: #c01604;
-    --fondo-blur: rgba(0, 0, 0, 0.75);
+    --oscuro: #000000;
+    --gris: #f0f0f0;
+    --borde: #444;
+    --hover: #b8860b;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'chill', sans-serif;
 }
 
 body {
     margin: 0;
     background-image: url('../img/proveedores.png');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
     color: #fefefe;
     min-height: 100vh;
 }
@@ -53,18 +53,20 @@ nav .logo {
     width: 90%;
     max-width: 1400px;
     height: 80vh;
-    background: var(--fondo-blur);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(15px);
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     margin: 20px auto 0 auto;
+    transform: translateY(0);
 }
 
 /* PANEL FORMULARIO */
 .panel-formulario {
     flex: 1;
     padding: 30px;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -116,18 +118,18 @@ nav .logo {
 }
 
 .botones button:hover {
-    background-color: #ffaa33;
+    background-color: var(--hover);
     color: #111;
     transform: scale(1.05);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 .botones .eliminar {
-    background-color: var(--rojo);
+    background-color: #ff1900;
 }
 
 .botones .eliminar:hover {
-    background-color: var(--rojo-hover);
+    background-color: #c01604;
 }
 
 /* PANEL TABLA */
@@ -166,4 +168,16 @@ nav .logo {
     border-bottom: 1px solid #ccc;
     text-align: left;
     white-space: nowrap;
+}
+
+.marca-interna {
+    margin-top: auto;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(150%);
 }

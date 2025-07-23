@@ -18,7 +18,7 @@
     <nav>
         <a href="admin.jsp" class="logo">Essenza & Co.</a>
     </nav>
-    
+
     <div class="fondo"></div>
 
     <div class="contenedor-principal">
@@ -30,12 +30,14 @@
                 <input type="text" id="direccion" placeholder="Dirección" />
                 <input type="text" id="celular" placeholder="Celular" />
                 <input type="email" id="correo" placeholder="Correo" />
-                
                 <div class="botones">
                     <button>Agregar</button>
                     <button>Actualizar</button>
                     <button>Buscar</button>
                     <button class="eliminar">Eliminar</button>
+                </div>
+                <div class="marca-interna">
+                    Essenza & Co.
                 </div>
             </div>
         </div>
@@ -45,7 +47,7 @@
                 <table class="tabla">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>Código del Proveedor</th>
                             <th>Nombre</th>
                             <th>Dirección</th>
                             <th>Celular</th>
@@ -62,8 +64,9 @@
                         </tr>
                     </tbody>
                 </table>
-            </div> 
-        </div> 
-    </div>  
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
