@@ -1,0 +1,141 @@
+:root {
+    --dorado: #daa520;
+    --oscuro: #2c2c2c;
+    --gris: #f0f0f0;
+    --borde: #444;
+    --hover: #b8860b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-image: url(../images/proveedores.png);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+/* Contenedor para formulario y tabla */
+.contenedor {
+    display: flex;
+    width: 100%;
+    background-color: transparent; /* para que se vea el blur del contenedor principal */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+/* Formulario */
+.formulario {
+    width: 35%;
+    background-color: var(--oscuro);
+    color: white;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-right: 5px solid var(--dorado);
+    border-radius: 0 0 0 15px;
+}
+
+.formulario h2 {
+    margin-bottom: 0.5em;
+    font-size: 1.8em;
+}
+
+.formulario input {
+    padding: 0.6em;
+    border: none;
+    border-radius: 8px;
+    background-color: #ddd;
+    transition: 0.3s;
+}
+
+.formulario input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px var(--dorado);
+}
+
+/* Botones */
+.botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+    margin-top: 1em;
+}
+
+.botones button {
+    padding: 0.6em;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--dorado);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botones button:hover {
+    background-color: var(--hover);
+    transform: scale(1.05);
+}
+
+.marca {
+    margin-top: auto;
+    text-align: center;
+}
+
+.marca a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.marca a:hover {
+    color: var(--dorado);
+}
+
+/* Tabla */
+.tabla {
+    width: 65%;
+    padding: 2em;
+    background-color: var(--gris);
+    overflow-x: auto;
+    border-radius: 0 15px 15px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--dorado);
+    padding: 0.8em;
+    text-align: left;
+}
+
+td {
+    padding: 0.8em;
+    border-bottom: 1px solid #ccc;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}

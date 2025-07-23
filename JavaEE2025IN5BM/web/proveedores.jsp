@@ -1,0 +1,69 @@
+<%-- 
+    Document   : proveedores
+    Created on : 22/07/2025, 17:10:03
+    Author     : User
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana de Proveedores</title>
+    <link rel="stylesheet" href="Styles/proveedor.css">
+</head>
+<body>
+
+    <nav>
+        <a href="admin.jsp" class="logo">Essenza & Co.</a>
+    </nav>
+    
+    <div class="fondo"></div>
+
+    <div class="contenedor-principal">
+        <div class="panel-formulario">
+            <h1>Gestión de Proveedores</h1>
+            <div class="formulario">
+                <input type="text" id="codigo" placeholder="Código del Proveedor" />
+                <input type="text" id="nombre" placeholder="Nombre" />
+                <input type="text" id="direccion" placeholder="Dirección" />
+                <input type="text" id="celular" placeholder="Celular" />
+                <input type="email" id="correo" placeholder="Correo" />
+                
+                <div class="botones">
+                    <button>Agregar</button>
+                    <button>Actualizar</button>
+                    <button>Buscar</button>
+                    <button class="eliminar">Eliminar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-tabla">
+            <div class="tabla-contenedor">
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Dirección</th>
+                            <th>Celular</th>
+                            <th>Correo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Juan Pérez</td>
+                            <td>Ciudad Centro</td>
+                            <td>5555-0000</td>
+                            <td>juan@email.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div> 
+    </div>  
+</body>
+</html>
