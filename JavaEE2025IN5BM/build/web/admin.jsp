@@ -26,6 +26,7 @@
             <li><a href="empleado.jsp">Empleados</a></li>
             <li><a href="">Ventas</a></li>
             <li><a href="venta.jsp">Ventas</a></li>
+            <li><a href="DetalleVenta.jsp">Detalle Ventas</a></li>
             <li><a href="">Facturas</a></li>
             <li><a href="">Compras</a></li>
             <li><a href="detalleCompra.jsp">Detalle Compras</a></li>
