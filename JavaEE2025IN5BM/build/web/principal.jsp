@@ -18,9 +18,8 @@
     <nav>
         <a href="index.jsp" class="logo"> Essenza & Co.</a>
         <div class="links">
-            <a href="principal.jsp">Principal</a>
             <div class="seleccionar-productos">
-                <a href="Productos.jsp">Productos</a>
+                <a href="Productos.jsp" class="nav-link">Productos</a>
                 <div class="seleccionar">
                     <a href="#destacado">Destacado</a>
                     <a href="#accesorios">Accesorios H/M</a>
@@ -28,7 +27,14 @@
                     <a href="#mujer">Mujer</a>
                 </div>
             </div>
-            <a href="AcercaNosotros.jsp">Acerca de nosotros</a>
+            <div class="avatar">
+                <a href="#" class="nav-link avatar-link">
+                    <img src="img/UsuarioPredeterminado.png" alt="Avatar">
+                </a>
+                <div class="avatar-menu">
+                    <a href="index.html">Cerrar sesión</a>
+                </div>
+            </div>
         </div>
     </nav>
     

@@ -28,8 +28,18 @@ nav .logo {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
-nav .links a {
+nav .links {
+    display: flex;
+    align-items: center;
+}
+
+nav .links .seleccionar-productos,
+nav .links .avatar {
+    position: relative;
     margin-left: 2.5em;
+}
+
+nav .links .nav-link {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
@@ -39,82 +49,104 @@ nav .links a {
     border-radius: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    display: inline-block;
 }
 
-nav .links a:hover {
+nav .links .nav-link:hover {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.1); /* fondo claro al hacer hover */
+    background: rgba(255, 255, 255, 0.1); /* Fondo claro al hacer hover */
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
 }
 
-nav .links a::after {
+nav .links .nav-link::after {
     content: '';
     position: absolute;
     bottom: -8px;
     left: 50%;
     width: 0;
     height: 3px;
-    background: #ffffff; /* línea blanca al hacer hover */
+    background: #ffffff; /* Línea blanca al hacer hover */
     transition: all 0.3s ease;
     transform: translateX(-50%);
     border-radius: 2px;
 }
 
-nav .links a:hover::after {
+nav .links .nav-link:hover::after {
     width: 100%;
+}
+
+nav .links .seleccionar,
+nav .links .avatar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000; /* Fondo negro para el dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 10;
+    min-width: 150px;
+}
+
+nav .links .seleccionar-productos:hover .seleccionar,
+nav .links .avatar:hover .avatar-menu {
+    display: block;
+}
+
+nav .links .seleccionar a,
+nav .links .avatar-menu a {
+    display: block;
+    padding: 5px 10px;
+    color: #ffffff; /* Texto blanco para visibilidad */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav .links .seleccionar a:hover,
+nav .links .avatar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo claro al hacer hover */
+    color: #ffffff;
+}
+
+nav .links .seleccionar a::after,
+nav .links .avatar-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 0;
+    height: 2px;
+    background: #ffffff; /* Línea blanca al hacer hover */
+    transition: width 0.3s ease;
+}
+
+nav .links .seleccionar a:hover::after,
+nav .links .avatar-menu a:hover::after {
+    width: calc(100% - 20px); /* Ajustar ancho para márgenes */
+}
+
+nav .links .avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 0.5em;
+    transition: all 0.3s ease; 
 }
 
 
 /* Estilo neutro para encabezado */
 .encabezado {
-    background: linear-gradient(135deg, #001122 0%, #7fa0ee 50%, #0066ff 100%);
     background: #f9f9f5; /* Blanco hueso */
     padding: 4em 2em;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
-
-.seleccionar-productos {
-    position: relative;
-    display: inline-block;
-}
-
-.seleccionar {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%; 
-    transform: translateX(-50%); 
-    background: #000; 
-    padding: 0.3em 0;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    z-index: 20;
-    border-radius: 8px;
-    white-space: nowrap;
-}
-
-.seleccionar-productos:hover .seleccionar {
-    display: block;
-}
-
-
-.seleccionar a {
-    display: block;
-    padding: 0.3em 0;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 0.85rem;
-    text-align: left;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.seleccionar a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
-}
-
 /* Buscador */
 .buscar {
     position: relative;
