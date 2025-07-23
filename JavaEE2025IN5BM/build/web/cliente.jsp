@@ -16,7 +16,7 @@
 <body>
 
     <nav>
-        <a href="admin.jsp" class="logo"> Essenza & Co.</a>
+        <a href="admin.html" class="logo"> Essenza & Co.</a>
     </nav>
     
     <div class="fondo"></div>
@@ -33,7 +33,7 @@
             <div class="botones">
                 <button>Agregar</button>
                 <button>Actualizar</button>
-                <button>Buscar</button>
+                <button >Buscar</button>
                 <button class="eliminar">Eliminar</button>
             </div>
             <div class="marca-interna">
