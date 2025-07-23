@@ -23,7 +23,7 @@
 
     <div class="contenedor-principal">
         <div class="panel-formulario">
-            <h1>Gestión de Productos</h1>
+            <h1>Gestión de Clientes</h1>
             <div class="formulario">
                 <input type="text" id="marca" placeholder="Codigo del cliente" />
                 <input type="text" id="nombre" placeholder="Nombre del Cliente" />
