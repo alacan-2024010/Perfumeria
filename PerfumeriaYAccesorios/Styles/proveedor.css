@@ -4,16 +4,17 @@
     --gris: #f0f0f0;
     --borde: #444;
     --hover: #b8860b;
-}
-
-* {
+    --transicion: all 0.3s ease;
+  }
+  
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'chill', sans-serif;
-}
-
-body {
+  }
+  
+  body {
     margin: 0;
     background-image: url(../Images/proveedores.png);
     background-size: cover;
@@ -21,46 +22,57 @@ body {
     background-position: center;
     color: #fefefe;
     min-height: 100vh;
-}
-
-nav {
+    background-attachment: fixed;
+  }
+  
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
-    background: #000;
+    background: rgba(0, 0, 0, 0.9);
     color: white;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
-}
-
-nav .logo {
+    backdrop-filter: blur(10px);
+    transition: var(--transicion);
+  }
+  
+  nav .logo {
     font-size: 2em;
     color: #ffffff;
     text-decoration: none;
     font-weight: 800;
     letter-spacing: 2px;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-}
-
-.contenedor-principal {
+    transition: var(--transicion);
+  }
+  
+  nav .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .contenedor-principal {
     display: flex;
     width: 90%;
     max-width: 1400px;
     height: 80vh;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(15px);
     border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     margin: 20px auto 0 auto;
     transform: translateY(0);
-}
-
-.panel-formulario {
+    transition: var(--transicion);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .panel-formulario {
     flex: 1;
     padding: 30px;
     color: white;
@@ -68,103 +80,201 @@ nav .logo {
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
-}
-
-.panel-formulario h1 {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .panel-formulario h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: center;
     color: var(--dorado);
-}
-
-.formulario {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .panel-formulario h1:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--dorado);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .formulario {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.formulario input {
-    padding: 12px;
+  }
+  
+  .formulario input {
+    padding: 15px;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
-    background-color: #e7e7e2;
+    background-color: rgba(231, 231, 226, 0.9);
     color: #111;
-}
-
-.botones {
+    transition: var(--transicion);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formulario input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 176, 103, 0.5);
+    transform: translateY(-2px);
+    background-color: #ffffff;
+  }
+  
+  .botones {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-}
-
-.botones button {
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .botones button {
     flex: 1 1 40%;
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: var(--dorado);
     border: none;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    color: white;
+    color: rgb(68, 39, 5);
     font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.botones button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .botones button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%) skewX(-15deg);
+    transition: var(--transicion);
+    z-index: -1;
+  }
+  
+  .botones button:hover {
     background-color: var(--hover);
     color: #111;
-    transform: scale(1.05);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-}
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .botones button:hover:after {
+    transform: translateX(100%) skewX(-15deg);
+  }
+  
+  .botones button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Estilo botón UI de eliminar */
+  .ui-btn {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+    color: rgb(219, 218, 218);
+    border: 2px solid rgb(219, 218, 218);
+    background-color: transparent;
+    width: 120px;
+    height: 40px;
+    transition: 0.2s ease;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  
+  .botonElminar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
 
-.botones .eliminar {
-    background-color: #ff1900;
-}
-
-.botones .eliminar:hover {
-    background-color: #c01604;
-}
-
-.panel-tabla {
+  .ui-btn:hover {
+    color: rgb(247, 247, 247);
+    background-color: rgb(202, 25, 25);
+    border-color: rgb(202, 25, 25);
+    text-shadow: 0 0 50px white, 0 0 20px white, 0 0 15px white;
+    box-shadow: 0 0 50px rgb(202, 25, 25), 0 0 30px rgb(202, 25, 25),
+      0 0 60px rgb(202, 25, 25), 0 0 120px rgb(202, 25, 25);
+    font-size: 20px;
+    width: 130px;
+    height: 50px;
+    letter-spacing: 3px;
+  }
+  
+  .ui-btn:active {
+    width: 115px;
+    height: 38px;
+    letter-spacing: 0px;
+  }
+  
+  .panel-tabla {
     flex: 1.5;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 30px;
     display: flex;
     flex-direction: column;
-}
-
-.tabla-contenedor {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .tabla-contenedor {
     overflow-y: auto;
     flex: 1;
     border-radius: 10px;
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
-}
-
-.tabla {
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .tabla {
     width: 100%;
     border-collapse: collapse;
-    background-color: #ffffffcc;
+    background-color: rgba(255, 255, 255, 0.9);
     color: #111;
-}
-
-.tabla thead {
+    position: relative;
+  }
+  
+  .tabla thead {
     background-color: var(--dorado);
     position: sticky;
     top: 0;
     z-index: 10;
     color: white;
-}
-
-.tabla th, .tabla td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tabla th,
+  .tabla td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
     text-align: left;
-    white-space: nowrap;
-}
-
-.marca-interna {
+    transition: var(--transicion);
+  }
+  
+  .tabla tr:hover {
+    background-color: rgba(212, 176, 103, 0.2);
+  }
+  
+  .tabla th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .marca-interna {
     margin-top: auto;
     text-align: center;
     font-size: 1.6rem;
@@ -174,4 +284,64 @@ nav .logo {
     user-select: none;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     transform: translateY(150%);
-}
+    position: relative;
+    padding-top: 20px;
+  }
+
+  
+  
+  .marca-interna:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: var(--dorado);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes shine {
+    from {
+      background-position: -100%;
+    }
+    to {
+      background-position: 100%;
+    }
+  }
+  
+  .botones button:not(.ui-btn) {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    background-size: 200% 100%;
+    animation: shine 3s infinite;
+  }
+  
+  .tabla-contenedor::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .tabla-contenedor::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .tabla-contenedor::-webkit-scrollbar-thumb {
+    background: var(--dorado);
+    border-radius: 10px;
+  }
+  
+  .tabla-contenedor::-webkit-scrollbar-thumb:hover {
+    background: var(--hover);
+  }
+  
