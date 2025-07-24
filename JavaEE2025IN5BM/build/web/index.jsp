@@ -16,7 +16,7 @@
     </head>
 
     <nav>
-        <a href="index.jsp" class="titulo"> Essenza & Co.</a>
+        <a href="index.html" class="titulo"> Essenza & Co.</a>
         <div class="links">
             <a href="acercaNosotros.jsp">Acerca de nosotros</a>
         </div>
@@ -36,7 +36,7 @@
             <p>Essenza & Co.</p>
             <p class="subtitulo">Ingresa tus datos para iniciar sesion</p>
 
-            <form action="principal.jsp">
+            <form action="admin.jsp">
                 <input type="correo" placeholder="Correo" required />
                 <input type="contrasenia" placeholder="Contrasenia" required />
                 <button type="submit" class="boton-brillante">Iniciar Sesión</button>

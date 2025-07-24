@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestión de Productos</title>
-    <link rel="stylesheet" href="../Styles/producto.css" />
+    <link rel="stylesheet" href="../Styles/factura.css" />
     <link rel="stylesheet" href="font.css" />
 </head>
 
@@ -20,17 +20,14 @@
 
     <div class="contenedor-principal">
         <div class="panel-formulario">
-            <h1>Gestión de Productos</h1>
+            <h1>Gestión de Facturas</h1>
             <div class="formulario">
 
-                <input type="text" autocomplete="off" id = "txtCodigoProducto" name="text" class="input" placeholder="ID del producto">
-                <input type="text" autocomplete="off" id = "txtNombreProducto" name="text" class="input" placeholder="Nombre del producto">
-                <input type="text" autocomplete="off" id = "txtDescripcionProducto" name="text" class="input" placeholder="Descripcion">
-                <input type="text" autocomplete="off" id = "txtPrecioProducto" name="text" class="input" placeholder="Precio">
-                <input type="text" autocomplete="off" id = "txtStock" name="text" class="input" placeholder="Existencias">
-                <input type="text" autocomplete="off" id = "txtCodigoCategoria" name="text" class="input" placeholder="ID Categoria">
-                <input type="text" autocomplete="off" id = "txtCodigoProveedor" name="text" class="input" placeholder="ID Marca">
-
+                <input type="text" autocomplete="off" id = "txtCodigoFactura" name="text" class="input" placeholder="ID de la Factura">
+                <input type="text" autocomplete="off" id = "txtNumeroFactura" name="text" class="input" placeholder="Número de la factura">
+                <input type="text" autocomplete="off" id = "txtFechaEmision" name="text" class="input" placeholder="Fecha de Emision">
+                <input type="text" autocomplete="off" id = "txtTotal" name="text" class="input" placeholder="Total">
+                <input type="text" autocomplete="off" id = "txtCodigoVenta" name="text" class="input" placeholder="Código de venta">
 
                 <div class="botones">
 
@@ -176,12 +173,10 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                            <th>Existencias</th>
-                            <th>ID Categoría</th>
-                            <th>ID Marca</th>
+                            <th>Numero</th>
+                            <th>Fecha</th>
+                            <th>Total</th>
+                            <th>ID venta</th>
                         </tr>
                     </thead>
                     <tbody>

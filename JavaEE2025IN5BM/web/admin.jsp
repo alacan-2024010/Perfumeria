@@ -23,7 +23,7 @@
             <li><a href="empleado.jsp">Empleados</a></li>
             <li><a href="ventas.jsp">Ventas</a></li>
             <li><a href="DetalleVenta.jsp">Detalle Ventas</a></li>
-            <li><a href="">Facturas</a></li>
+            <li><a href="factura.jsp">Facturas</a></li>
             <li><a href="venta.jsp">Ventas</a></li>
             <li><a href="detalleVenta.jsp">Detalle Ventas</a></li>
             <li><a href="compras.jsp">Compras</a></li>
