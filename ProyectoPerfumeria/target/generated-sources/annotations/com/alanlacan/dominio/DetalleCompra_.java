@@ -7,11 +7,7 @@ import javax.annotation.processing.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-<<<<<<< HEAD
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2025-07-22T15:47:06", comments="EclipseLink-2.7.12.v20230209-rNA")
-=======
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2025-07-22T19:46:49", comments="EclipseLink-2.7.12.v20230209-rNA")
->>>>>>> origin/ftpcalderon-2021547
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2025-07-24T21:01:53", comments="EclipseLink-2.7.12.v20230209-rNA")
 @StaticMetamodel(DetalleCompra.class)
 public class DetalleCompra_ { 
 
