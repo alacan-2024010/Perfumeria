@@ -29,15 +29,18 @@ public class Cliente {
     private String emailCliente;
     @Column
     private String contrasenia;
+    @Column(name = "imagen")
+    private String imagen;
 
     public Cliente() {
     }
 
-    public Cliente( String nombreCliente, String apellidoCliente, String emailCliente, String contrasenia) {
+    public Cliente( String nombreCliente, String apellidoCliente, String emailCliente, String contrasenia, String imagen) {
         this.nombreCliente = nombreCliente;
         this.apellidoCliente = apellidoCliente;
         this.emailCliente = emailCliente;
         this.contrasenia = contrasenia;
+        this.imagen=imagen;
     }
 
     public int getCodigoCliente() {
@@ -80,10 +83,24 @@ public class Cliente {
         this.contrasenia = contrasenia;
     }
 
+    public String getImagen() {
+        if (imagen == null || imagen.isEmpty()) {
+        return "../Images/usuarioPredeterminado.png";
+        }
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
     @Override
     public String toString() {
-        return "Cliente{" + "codigoCliente=" + codigoCliente + ", nombreCliente=" + nombreCliente + ", apellidoCliente=" + apellidoCliente + ", emailCliente=" + emailCliente + ", contrasenia=" + contrasenia + '}';
+        return "Cliente{" + "codigoCliente=" + codigoCliente + ", nombreCliente=" + nombreCliente + ", apellidoCliente=" + apellidoCliente + ", emailCliente=" + emailCliente + ", contrasenia=" + contrasenia + ", imagen=" + getImagen() + '}';
     }
+
+    
+    
     
     
     public void menuCliente(){
@@ -112,8 +129,13 @@ public class Cliente {
                     String email = leer.nextLine();
                     System.out.println("Contraseña del Cliente:");
                     String contra = leer.nextLine();
+                    System.out.println("(Solo escribe null)");
+                    String img = leer.nextLine();
+                    if (img == null || img.trim().equalsIgnoreCase("null") || img.trim().isEmpty()) {
+                        img = null; 
+                    }
                     
-                    Cliente nuevoC = new Cliente(nombre, apellido, email, contra);
+                    Cliente nuevoC = new Cliente(nombre, apellido, email, contra,img);
                     em.getTransaction().begin();
                     em.persist(nuevoC);
                     em.getTransaction().commit();
@@ -143,6 +165,13 @@ public class Cliente {
 
                         System.out.println("Nueva contraseña:");
                         actualizarC.setContrasenia(leer.nextLine());
+                        
+                        System.out.println("(Solo escribe null)");
+                        String imgA = leer.nextLine();
+                        if (imgA == null || imgA.trim().equalsIgnoreCase("null") || imgA.trim().isEmpty()) {
+                            imgA = null;
+                        }
+                        actualizarC.setImagen(imgA);
 
                         em.getTransaction().begin();
                         em.merge(actualizarC);
