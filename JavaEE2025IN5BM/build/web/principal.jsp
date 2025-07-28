@@ -29,7 +29,7 @@
         </div>
         <div class="avatar">
             <a href="#" class="nav-link avatar-link">
-                <img src="../img/UsuarioPredeterminado.png" alt="Avatar">
+                <img src="img/UsuarioPredeterminado.png" alt="Avatar">
             </a>
             <div class="avatar-menu">
                 <a href="index.html">Cerrar sesión</a>
@@ -42,7 +42,7 @@
 <body>
     <header class="encabezado">
         <div class="buscar">
-            <img src="../img/lupa.png" alt="Buscar" class="icono-lupa">
+            <img src="img/lupa.png" alt="Buscar" class="icono-lupa">
             <input type="text" id="nombre" placeholder=" " required />
             <label for="nombre">Buscar</label>
         </div>
@@ -52,7 +52,7 @@
 
     <div class="stock">
         <div class="imgStock">
-            <img src="../img/PDiamante.jpg" alt="Portada del Producto" />
+            <img src="img/PDiamante.jpg" alt="Portada del Producto" />
         </div>
         <div class="temaProducto">
             <h2 class="productoTitulo">Pulsera de Diamantes</h2>
@@ -69,7 +69,7 @@
 
     <div class="stock">
         <div class="imgStock">
-            <img src="../img/APlatino.jpg" alt="Portada del producto" />
+            <img src="img/APlatino.jpg" alt="Portada del producto" />
         </div>
         <div class="temaProducto">
             <h2 class="productoTitulo">Anillo de Platino</h2>
@@ -86,7 +86,7 @@
 
     <div class="stock">
         <div class="imgStock">
-            <img src="../img/BChannelClassic.jpg" alt="Portada del producto" />
+            <img src="img/BChannelClassic.jpg" alt="Portada del producto" />
         </div>
         <div class="temaProducto">
             <h2 class="productoTitulo">Bolso Channel Classic</h2>
@@ -103,7 +103,7 @@
 
     <div class="stock">
         <div class="imgStock">
-            <img src="../img/HommeElegance.jpg" alt="Portada del producto" />
+            <img src="img/HommeElegance.jpg" alt="Portada del producto" />
         </div>
         <div class="temaProducto">
             <h2 class="productoTitulo">Perfume Homme Intense</h2>
@@ -120,7 +120,7 @@
 
     <div class="stock">
         <div class="imgStock">
-            <img src="../img/FElegance.jpg" alt="Portada del producto" />
+            <img src="img/FElegance.jpg" alt="Portada del producto" />
         </div>
         <div class="temaProducto">
             <h2 class="productoTitulo">Perfume Femme Elegance</h2>
@@ -140,7 +140,7 @@
         <h2 class="categoria" id="accesorios">Accesorios para Hombre y Mujer</h2>
         <div class="productosHz">
             <div class="producto">
-                <div class="imgProducto"><img class="imgProducto" src="../img/CollarPlata.jpg" alt="" /></div>
+                <div class="imgProducto"><img class="imgProducto" src="img/CollarPlata.jpg" alt="" /></div>
                 <p class="tituloProducto">Collar de Plata</p>
                 <p class="marcaProducto">Joyas Elegance</p>
                 <span class="etiqueta">Disponible</span>
@@ -148,7 +148,7 @@
                 <button class="btnComp" onclick="addToCart('Collar de Plata', 350, '../img/CollarPlata.jpg')">Comprar</button>
             </div>
             <div class="producto">
-                <div class="imgProducto"><img class="imgProducto" src="../img/RelojRolex.jpg" alt="  "></div>
+                <div class="imgProducto"><img class="imgProducto" src="img/RelojRolex.jpg" alt="  "></div>
                 <p class="tituloProducto">Reloj Clásico</p>
                 <p class="marcaProducto">Rolex</p>
                 <span class="etiqueta">Disponible</span>
@@ -156,7 +156,7 @@
                 <button class="btnComp" onclick="addToCart('Reloj Clásico', 1800, '../img/RelojRolex.jpg')">Comprar</button>
             </div>
             <div class="producto">
-                <div class="imgProducto"><img class="imgProducto" src="../img/AretesOro.jpg"  alt="" /></div>
+                <div class="imgProducto"><img class="imgProducto" src="img/AretesOro.jpg"  alt="" /></div>
                 <p class="tituloProducto">Aretes de Oro</p>
                 <p class="marcaProducto">Golden Shine</p>
                 <span class="etiqueta">Disponible</span>
@@ -165,23 +165,23 @@
             </div>
 
             <div class="producto">
-                <div class="imgProducto"><img class="imgProducto" src="../img/CinturonCuero.jpg" alt="" /></div>
+                <div class="imgProducto"><img class="imgProducto" src="img/CinturonCuero.jpg" alt="" /></div>
                 <p class="tituloProducto">Cinturón de Cuero</p>
                 <p class="marcaProducto">Urban Man</p>
                 <span class="etiqueta">Disponible</span>
                 <p class="precio">Q. 220.00</p>
-                <button class="btnComp" onclick="addToCart('Cinturón de Cuero', 220, '../Images/CinturonCuero.jpg')">Comprar</button>
+                <button class="btnComp" onclick="addToCart('Cinturón de Cuero', 220, 'img/CinturonCuero.jpg')">Comprar</button>
             </div>
             <div class="producto">
-                <div class="imgProducto"><img class="imgProducto" src="../img/CarteraCuero.jpg" alt=""></div>
+                <div class="imgProducto"><img class="imgProducto" src="img/CarteraCuero.jpg" alt=""></div>
                 <p class="tituloProducto">Cartera de Cuero</p>
                 <p class="marcaProducto">Urban Man</p>
                 <span class="etiqueta">Disponible</span>
                 <p class="precio">Q. 300.00</p>
-                <button class="btnComp" onclick="addToCart('Cartera de Cuero', 300, '../Images/CarteraCuero.jpg')">Comprar</button>
+                <button class="btnComp" onclick="addToCart('Cartera de Cuero', 300, '../img/CarteraCuero.jpg')">Comprar</button>
             </div>
             <div class="producto">
-                <div class="imgProducto"><img class="imgProducto" src="../img/AnilloOro.jpg" alt="" /></div>
+                <div class="imgProducto"><img class="imgProducto" src="img/AnilloOro.jpg" alt="" /></div>
                 <p class="tituloProducto">Anillo de Oro 14K</p>
                 <p class="marcaProducto">Golden Elegance</p>
                 <span class="etiqueta">Disponible</span>
@@ -190,7 +190,7 @@
             </div>
 
             <div class="producto">
-                <div class="imgProducto"><img class="imgProducto" src="../img/PulseraDeCuero.png" alt="" /></div>
+                <div class="imgProducto"><img class="imgProducto" src="img/PulseraDeCuero.png" alt="" /></div>
                 <p class="tituloProducto">Pulseras de Cuero</p>
                 <p class="marcaProducto">Montblanc</p>
                 <span class="etiqueta">Disponible</span>
@@ -198,7 +198,7 @@
                 <button class="btnComp" onclick="addToCart('Pulseras de Cuero', 380, '../img/PulseraDeCuero.png')">Comprar</button>
             </div>
             <div class="producto">
-                <div class="imgProducto"><img class="imgProducto" src="../img/LentesDeSol.png" alt=""></div>
+                <div class="imgProducto"><img class="imgProducto" src="img/LentesDeSol.png" alt=""></div>
                 <p class="tituloProducto">Lentes de Sol</p>
                 <p class="marcaProducto">Prada</p>
                 <span class="etiqueta">Disponible</span>
@@ -206,7 +206,7 @@
                 <button class="btnComp" onclick="addToCart('Lentes de Sol', 720, '../img/LentesDeSol.png')">Comprar</button>
             </div>
             <div class="producto">
-                <div class="imgProducto"><img class="imgProducto" src="../img/BolsoPequeño.png" alt="" /></div>
+                <div class="imgProducto"><img class="imgProducto" src="img/BolsoPequeño.png" alt="" /></div>
                 <p class="tituloProducto">Bolso Pequeño</p>
                 <p class="marcaProducto">Michael Kors</p>
                 <span class="etiqueta">Disponible</span>
@@ -221,7 +221,7 @@
         <h2 class="categoriaH" id="hombre">Perfumes de Hombre</h2>
         <div class="productosHzH">
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/SauvageDior.jpg" alt="" /></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/SauvageDior.jpg" alt="" /></div>
                 <p class="tituloProductoH">Dior Sauvage</p>
                 <p class="marcaProductoH">Dior</p>
                 <span class="etiquetaH">Disponible</span>
@@ -229,7 +229,7 @@
                 <button class="btnCompH" onclick="addToCart('Dior Sauvage', 1500, '../img/SauvageDior.jpg')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/Bleu de Chanel.jpg" alt=""></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/Bleu de Chanel.jpg" alt=""></div>
                 <p class="tituloProductoH">Bleu de Chanel</p>
                 <p class="marcaProductoH">Chanel</p>
                 <span class="etiquetaH">Disponible</span>
@@ -237,7 +237,7 @@
                 <button class="btnCompH" onclick="addToCart('Bleu de Chanel', 1250, '../img/Bleu de Chanel.jpg')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/Acqua di Giò.jpg" alt="" /></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/Acqua di Giò.jpg" alt="" /></div>
                 <p class="tituloProductoH">Acqua di Giò</p>
                 <p class="marcaProductoH">Giorgio Armani</p>
                 <span class="etiquetaH">Disponible</span>
@@ -245,7 +245,7 @@
                 <button class="btnCompH" onclick="addToCart('Acqua di Giò', 1400, '../img/Acqua di Giò.jpg')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/1 Million.jpg" alt=""></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/1 Million.jpg" alt=""></div>
                 <p class="tituloProductoH">1 Million</p>
                 <p class="marcaProductoH">Paco Rabanne</p>
                 <span class="etiquetaH">Disponible</span>
@@ -253,7 +253,7 @@
                 <button class="btnCompH" onclick="addToCart('1 Million', 1200, '../img/1 Million.jpg')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/Le Male.jpg" alt"" /></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/Le Male.jpg" alt"" /></div>
                 <p class="tituloProductoH">Le Male</p>
                 <p class="marcaProductoH">Jean Paul Gaultier</p>
                 <span class="etiquetaH">Disponible</span>
@@ -261,7 +261,7 @@
                 <button class="btnCompH" onclick="addToCart('Le Male', 1100, '../img/Le Male.jpg')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/Terre d’Hermès.jpg" alt=""></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/Terre d’Hermès.jpg" alt=""></div>
                 <p class="tituloProductoH">Terre d’Hermès</p>
                 <p class="marcaProductoH">Hermès</p>
                 <span class="etiquetaH">Disponible</span>
@@ -269,7 +269,7 @@
                 <button class="btnCompH" onclick="addToCart('Terre d’Hermès', 1550, '../img/Terre d’Hermès.jpg')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/Aventus.jpg" alt"" /></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/Aventus.jpg" alt"" /></div>
                 <p class="tituloProductoH">Aventus</p>
                 <p class="marcaProductoH">Creed</p>
                 <span class="etiquetaH">Disponible</span>
@@ -277,7 +277,7 @@
                 <button class="btnCompH" onclick="addToCart('Aventus', 3500, '../img/Aventus.jpg')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/Boss Bottled.jpg" alt=""></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/Boss Bottled.jpg" alt=""></div>
                 <p class="tituloProductoH">Boss Bottled</p>
                 <p class="marcaProductoH">Hugo Boss</p>
                 <span class="etiquetaH">Disponible</span>
@@ -285,7 +285,7 @@
                 <button class="btnCompH" onclick="addToCart('Boss Bottled', 1300, '../img/Boss Bottled.jpg')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/FAHRENHEIT.png" alt"" /></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/FAHRENHEIT.png" alt"" /></div>
                 <p class="tituloProductoH">Fahrenheit</p>
                 <p class="marcaProductoH">Dior</p>
                 <span class="etiquetaH">Disponible</span>
@@ -293,7 +293,7 @@
                 <button class="btnCompH" onclick="addToCart('Fahrenheit', 1350, '../img/FAHRENHEIT.png')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/INVICTUS.png" alt=""></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/INVICTUS.png" alt=""></div>
                 <p class="tituloProductoH">Invictus</p>
                 <p class="marcaProductoH">Paco Rabanne</p>
                 <span class="etiquetaH">Disponible</span>
@@ -301,7 +301,7 @@
                 <button class="btnCompH" onclick="addToCart('Invictus', 1250, '../img/INVICTUS.png')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/EXPLORER.png" alt"" /></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/EXPLORER.png" alt"" /></div>
                 <p class="tituloProductoH">Explorer</p>
                 <p class="marcaProductoH">Montblanc</p>
                 <span class="etiquetaH">Disponible</span>
@@ -309,7 +309,7 @@
                 <button class="btnCompH" onclick="addToCart('Explorer', 1400, '../img/EXPLORER.png')">Comprar</button>
             </div>
             <div class="productoH">
-                <div class="imgProductoH"><img class="imgProductoH" src="../img/PUREXS.png" alt=""></div>
+                <div class="imgProductoH"><img class="imgProductoH" src="img/PUREXS.png" alt=""></div>
                 <p class="tituloProductoH">Pure XS</p>
                 <p class="marcaProductoH">Paco Rabanne</p>
                 <span class="etiquetaH">Disponible</span>
@@ -324,7 +324,7 @@
         <h2 class="categoriaM" id="mujer">Perfumes de Mujer</h2>
         <div class="productosHzM">
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/La Vie Est Belle.jpg" alt"" /></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/La Vie Est Belle.jpg" alt"" /></div>
                 <p class="tituloProductoM">La Vie Est Belle</p>
                 <p class="marcaProductoM">Lancôme</p>
                 <span class="etiquetaM">Disponible</span>
@@ -332,7 +332,7 @@
                 <button class="btnCompM" onclick="addToCart('La Vie Est Belle', 1450, '../img/La Vie Est Belle.jpg')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/J’adore.jpg" alt=""></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/J’adore.jpg" alt=""></div>
                 <p class="tituloProductoM">J’adore</p>
                 <p class="marcaProductoM">Dior</p>
                 <span class="etiquetaM">Disponible</span>
@@ -340,7 +340,7 @@
                 <button class="btnCompM" onclick="addToCart('J’adore', 1600, '../img/J’adore.jpg')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/Coco Mademoiselle.jpg" alt"" /></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/Coco Mademoiselle.jpg" alt"" /></div>
                 <p class="tituloProductoM">Coco Mademoiselle</p>
                 <p class="marcaProductoM">Chanel</p>
                 <span class="etiquetaM">Disponible</span>
@@ -348,7 +348,7 @@
                 <button class="btnCompM" onclick="addToCart('Coco Mademoiselle', 1550, '../img/Coco Mademoiselle.jpg')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/Black Opium.jpg" alt=""></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/Black Opium.jpg" alt=""></div>
                 <p class="tituloProductoM">Black Opium</p>
                 <p class="marcaProductoM">Yves Saint Laurent</p>
                 <span class="etiquetaM">Disponible</span>
@@ -356,7 +356,7 @@
                 <button class="btnCompM" onclick="addToCart('Black Opium', 1480, '../img/Black Opium.jpg')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/Light Blue.jpg" alt"" /></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/Light Blue.jpg" alt"" /></div>
                 <p class="tituloProductoM">Light Blue</p>
                 <p class="marcaProductoM">Dolce & Gabbana</p>
                 <span class="etiquetaM">Disponible</span>
@@ -364,7 +364,7 @@
                 <button class="btnCompM" onclick="addToCart('Light Blue', 1350, '../img/Light Blue.jpg')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/Good Girl.jpg" alt=""></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/Good Girl.jpg" alt=""></div>
                 <p class="tituloProductoM">Good Girl</p>
                 <p class="marcaProductoM">Carolina Herrera</p>
                 <span class="etiquetaM">Disponible</span>
@@ -372,7 +372,7 @@
                 <button class="btnCompM" onclick="addToCart('Good Girl', 1500, '../img/Good Girl.jpg')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/Mon Guerlain.jpg" alt"" /></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/Mon Guerlain.jpg" alt"" /></div>
                 <p class="tituloProductoM">Mon Guerlain</p>
                 <p class="marcaProductoM">Guerlain</p>
                 <span class="etiquetaM">Disponible</span>
@@ -380,7 +380,7 @@
                 <button class="btnCompM" onclick="addToCart('Mon Guerlain', 1520, '../img/Mon Guerlain.jpg')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/Flowerbomb.jpg" alt=""></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/Flowerbomb.jpg" alt=""></div>
                 <p class="tituloProductoM">Flowerbomb</p>
                 <p class="marcaProductoM">Viktor & Rolf</p>
                 <span class="etiquetaM">Disponible</span>
@@ -388,7 +388,7 @@
                 <button class="btnCompM" onclick="addToCart('Flowerbomb', 1600, '../img/Flowerbomb.jpg')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/BRIGHTCRYSTAL.png" alt"" /></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/BRIGHTCRYSTAL.png" alt"" /></div>
                 <p class="tituloProductoM">Bright Crystal</p>
                 <p class="marcaProductoM">Versace</p>
                 <span class="etiquetaM">Disponible</span>
@@ -396,7 +396,7 @@
                 <button class="btnCompM" onclick="addToCart('Bright Crystal', 1300, '../img/BRIGHTCRYSTAL.png')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/SI.png" alt=""></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/SI.png" alt=""></div>
                 <p class="tituloProductoM">Si</p>
                 <p class="marcaProductoM">Giorgio Armani</p>
                 <span class="etiquetaM">Disponible</span>
@@ -404,7 +404,7 @@
                 <button class="btnCompM" onclick="addToCart('Si', 1450, '../img/SI.png')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/ANGEL.png" alt"" /></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/ANGEL.png" alt"" /></div>
                 <p class="tituloProductoM">Angel</p>
                 <p class="marcaProductoM">Thierry Mugler</p>
                 <span class="etiquetaM">Disponible</span>
@@ -412,7 +412,7 @@
                 <button class="btnCompM" onclick="addToCart('Angel', 1500, '../img/ANGEL.png')">Comprar</button>
             </div>
             <div class="productoM">
-                <div class="imgProductoM"><img class="imgProductoM" src="../img/EUPHORIA.png" alt=""></div>
+                <div class="imgProductoM"><img class="imgProductoM" src="img/EUPHORIA.png" alt=""></div>
                 <p class="tituloProductoM">Euphoria</p>
                 <p class="marcaProductoM">Calvin Klein</p>
                 <span class="etiquetaM">Disponible</span>
