@@ -9,7 +9,7 @@ create table Clientes (
 	apellidoCliente varchar(100) not null,
 	emailCliente varchar(100),
     contrasenia varchar(100),
-	imagen varchar(100),
+	imagen varchar(100) default '../Images/usuarioPredeterminado.png',
 	primary key PK_codigoCliente(codigoCliente)
 );
 
@@ -140,11 +140,8 @@ Delimiter $$
 		in contrasenia varchar(100),
         in imagen varchar(100))
 	begin
-		if imagen is  null or imagen= ''THEN
-			set imagen = '../Images/usuarioPredeterminado.png';
-		end if;
-		insert into Clientes (nombreCliente, apellidoCliente , emailCliente, contrasenia, imagen)
-		values (nombreCliente, apellidoCliente, emailCliente, contrasenia, imagen);
+		insert into Clientes (nombreCliente, apellidoCliente, emailCliente, contrasenia, imagen)
+			values (nombreCliente, apellidoCliente, emailCliente, contrasenia, coalesce(nullif(imagen,''), '../Images/usuarioPredeterminado.png'));
 	end $$
 Delimiter ;
 call sp_AgregarCliente('1', '1', "admin@gmail.com", 'admin123','../Images/UsuarioAdmin');
@@ -168,7 +165,7 @@ call sp_AgregarCliente('Julio', 'Flores', 'julio@gmail.com', '54078932',null);
 Delimiter $$
 	create procedure sp_ListarClientes()
 		begin
-			select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia,imagen
+			select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia,coalesce(nullif(imagen, ''), '../Images/usuarioPredeterminado.png') as imagen
 			from Clientes;
 		end $$
 Delimiter ;
@@ -188,7 +185,7 @@ Delimiter ;
 Delimiter $$
 	create procedure sp_BuscarCliente(in codigoC int)
 	begin
-		select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia, imagen from Clientes
+		select codigoCliente, nombreCliente, apellidoCliente, emailCliente, contrasenia, coalesce(nullif(imagen, ''), '../Images/usuarioPredeterminado.png') as imagen from Clientes
 			where codigoCliente = codigoC;
 	end $$
 Delimiter ;
@@ -209,7 +206,7 @@ Delimiter $$
 			apellidoCliente = apellidoC,
 			emailCliente = emailC,
 			contrasenia = contr,
-			imagen = img
+			imagen = coalesce(nullif(img, ''), '../Images/usuarioPredeterminado.png')
 		where codigoCliente = codigoC;
 	end $$
 Delimiter ;
