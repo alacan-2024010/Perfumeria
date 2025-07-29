@@ -27,7 +27,7 @@ nav {
   backdrop-filter: blur(6px);
 }
 
-.titulo{
+.titulo {
   font-size: 22px;
   font-weight: bold;
   background: linear-gradient(90deg, #9aadff, #c4f7fa);
@@ -36,11 +36,9 @@ nav {
   text-shadow: 0 0 8px rgba(255, 150, 150, 0.3);
   letter-spacing: 1.3px;
   margin-bottom: 10px;
-
   opacity: 0;
   transform: translateY(-10px);
   animation: fadeInSlide 0.8s ease-out 0.3s forwards;
-
   transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -65,19 +63,31 @@ nav .links a {
 }
 
 nav .links a:hover {
-  color: #bdbdbd;
+  color: #bdbdbd;
 }
 
-
 .login-contendor {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 50px 35px;
+  width: 90%;
+  max-width: 370px;
   color: white;
-  width: 340px;
   text-align: center;
+  transition: all 0.4s ease;
+  animation: aparecer 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .login-contendor h2 {
@@ -86,7 +96,7 @@ nav .links a:hover {
 }
 
 .login-contendor p {
-  margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .subtitulo {
@@ -111,38 +121,6 @@ nav .links a:hover {
   padding: 6px 12px;
   cursor: pointer;
   transition: border-bottom 0.3s;
-}
-
-.login-contendor {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 0 10px rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
-  padding: 50px 35px;
-  width: 370px;
-  color: white;
-  text-align: center;
-  transition: all 0.4s ease;
-  animation: aparecer 0.8s ease forwards;
-  opacity: 0;
-  transform: translateY(30px);
-} 
-
-@keyframes aparecer {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.login-contendor h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.login-contendor p {
-  margin-bottom: 8px;
 }
 
 .login-contendor form input {
@@ -183,7 +161,7 @@ nav .links a:hover {
   transition: all 0.3s;
   line-height: 1.4em;
   border: 2px solid var(--blue);
-  background: linear-gradient(to right,rgba(0, 51, 102, 0.1) 1%,transparent 40%,transparent 60%, rgba(0, 85, 204, 0.1) 100%);
+  background: linear-gradient(to right, rgba(0, 51, 102, 0.1) 1%, transparent 40%, transparent 60%, rgba(0, 85, 204, 0.1) 100%);
   color: var(--blue);
   box-shadow: inset 0 0 10px rgba(0, 51, 102, 0.4), 0 0 9px 3px rgba(0, 51, 102, 0.1);
   cursor: pointer;
@@ -207,13 +185,14 @@ nav .links a:hover {
   width: 4em;
   height: 100%;
   top: 0;
-  transition: transform .4s ease-in-out;
-  background: linear-gradient(to right,transparent 1%, rgba(0, 85, 204, 0.1) 40%, rgba(0, 51, 102, 0.1) 60%,transparent 100%);
+  transition: transform 0.4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(0, 85, 204, 0.1) 40%, rgba(0, 51, 102, 0.1) 60%, transparent 100%);
 }
 
 .login-contendor form .boton-brillante:hover::before {
   transform: translateX(15em);
 }
+
 .extras {
   display: flex;
   justify-content: space-between;
@@ -231,18 +210,82 @@ nav .links a:hover {
   text-decoration: underline;
 }
 
-.activo{
+.activo {
   transition: 0.4s ease;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
-.activo:hover{
-  background-color: rgb(0, 102, 204); 
+.activo:hover {
+  background-color: rgb(0, 102, 204);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 102, 204, 0.7), 0 0 15px rgba(0, 200, 255, 0.4);
   transform: translateY(-8px) scale(1.08);
   cursor: pointer;
   color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav .links a {
+    margin-left: 15px;
+  }
+
+  .login-contendor {
+    padding: 40px 25px;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  .login-contendor h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px 15px;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+  }
+
+  nav .links a {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+
+  .login-contendor {
+    padding: 30px 20px;
+    width: 95%;
+  }
+
+  .titulo {
+    font-size: 18px;
+  }
+
+  .login-contendor h2 {
+    font-size: 20px;
+  }
+
+  .login-contendor form input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .login-contendor form .boton-brillante {
+    padding: 0.5em 2em;
+    font-size: 14px;
+  }
+
+  .extras {
+    font-size: 12px;
+  }
 }

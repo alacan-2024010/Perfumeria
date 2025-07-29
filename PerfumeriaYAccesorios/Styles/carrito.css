@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url('../Images/FondoCarrito.avif'); /* <-- Agrega tu imagen aquí */
+    background-image: url('../Images/FondoCarrito.avif');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -20,7 +20,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 12px 30px;
-    background-color: rgba(47, 65, 86, 0.95); /* navy con transparencia */
+    background-color: rgba(47, 65, 86, 0.95);
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -139,7 +139,6 @@ nav {
     border-radius: 2px;
 }
 
-
 .contenedor-carrito {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(5px);
@@ -231,4 +230,97 @@ nav {
 
 .btn-vaciar:hover {
     background-color: #2F4156;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    .seleccionar-productos, .avatar {
+        margin: 5px 0;
+    }
+
+    .seleccionar, .avatar-menu {
+        position: static;
+        width: 100%;
+    }
+
+    .encabezado {
+        padding: 20px 10px;
+    }
+
+    .titulo-carrito {
+        font-size: 28px;
+    }
+
+    .contenedor-carrito {
+        max-width: 100%;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .producto-carrito {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .imgProducto img {
+        margin-bottom: 10px;
+    }
+
+    .btn-vaciar {
+        float: none;
+        margin: 15px auto 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .titulo-carrito {
+        font-size: 24px;
+    }
+
+    .productoTitulo {
+        font-size: 16px;
+    }
+
+    .infoProducto p {
+        font-size: 14px;
+    }
+
+    .btnComprar {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .total {
+        font-size: 18px;
+    }
+
+    .btn-vaciar {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }

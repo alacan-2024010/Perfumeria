@@ -443,4 +443,92 @@ nav .logo:hover {
     }
 }
 
+@media (max-width: 1200px) {
+    .contenedor-principal {
+        height: auto;
+    }
+    .panel-formulario, .panel-tabla {
+        padding: 15px;
+    }
+    .panel-formulario h1 {
+        font-size: 1.6rem;
+    }
+    .formulario input {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    .botones button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-principal {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+    }
+    .panel-formulario, .panel-tabla {
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+    .panel-formulario h1 {
+        font-size: 1.4rem;
+    }
+    .formulario input {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    .botones button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .tabla th, .tabla td {
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.5em;
+    }
+    nav .logo {
+        font-size: 1.5em;
+    }
+    .contenedor-principal {
+        flex-direction: column;
+        width: 98%;
+        margin: 10px auto;
+    }
+    .panel-formulario, .panel-tabla {
+        padding: 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+    .panel-formulario h1 {
+        font-size: 1.2rem;
+    }
+    .formulario input {
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+    .botones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .botones button {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+    .tabla th, .tabla td {
+        padding: 6px;
+        font-size: 0.6rem;
+    }
+    .marca-interna {
+        font-size: 1rem;
+    }
+}
+
+
 

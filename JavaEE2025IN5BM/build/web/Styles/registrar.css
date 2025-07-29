@@ -247,3 +247,66 @@ nav .links a:hover {
   color: white;
 }
 
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav .links a {
+    margin-left: 15px;
+  }
+
+  .login-contendor {
+    padding: 40px 25px;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  .login-contendor h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px 15px;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+  }
+
+  nav .links a {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+
+  .login-contendor {
+    padding: 30px 20px;
+    width: 95%;
+  }
+
+  .titulo {
+    font-size: 18px;
+  }
+
+  .login-contendor h2 {
+    font-size: 20px;
+  }
+
+  .login-contendor form input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .login-contendor form .boton-brillante {
+    padding: 0.5em 2em;
+    font-size: 14px;
+  }
+
+  .extras {
+    font-size: 12px;
+  }
+}

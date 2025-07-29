@@ -235,3 +235,63 @@ nav ul li.avatar img:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 1200px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0.3rem;
+    }
+
+    .panel {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .panel h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.3rem;
+    }
+
+    nav ul li {
+        margin: 0.2rem;
+    }
+
+    nav ul li.avatar img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .panel h2 {
+        font-size: 1.5rem;
+    }
+
+    .panel {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
