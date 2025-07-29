@@ -27,6 +27,7 @@
                 <a href="#mujer">Mujer</a>
             </div>
         </div>
+        <a href="carrito.jsp" class="nav-link">Carrito</a>
         <div class="avatar">
             <a href="#" class="nav-link avatar-link">
                 <img src="img/UsuarioPredeterminado.png" alt="Avatar">
@@ -35,7 +36,6 @@
                 <a href="index.html">Cerrar sesión</a>
             </div>
         </div>
-        <a href="carrito.jsp" class="nav-link">Carrito</a>
     </div>
 </nav>
 

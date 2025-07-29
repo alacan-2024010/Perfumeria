@@ -35,7 +35,6 @@
                 <a href="index.jsp">Cerrar sesión</a>
             </div>
         </div>
-        <a href="carrito.jsp" class="nav-link">Carrito</a>
     </div>
 </nav>
 
