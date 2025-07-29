@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url('../img/FondoCarrito.avif'); /* <-- Agrega tu imagen aquí */
+    background-image: url('../img/FondoCarrito.avif');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -20,7 +20,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 12px 30px;
-    background-color: rgba(47, 65, 86, 0.95); /* navy con transparencia */
+    background-color: rgba(47, 65, 86, 0.95); 
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

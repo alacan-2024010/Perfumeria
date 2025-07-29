@@ -29,7 +29,7 @@
         </div>
         <div class="avatar">
             <a href="#" class="nav-link avatar-link">
-                <img src="../img/UsuarioPredeterminado.png" alt="Avatar">
+                <img src="img/UsuarioPredeterminado.png" alt="Avatar">
             </a>
             <div class="avatar-menu">
                 <a href="index.jsp">Cerrar sesión</a>
