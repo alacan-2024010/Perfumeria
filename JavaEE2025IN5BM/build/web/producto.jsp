@@ -145,26 +145,47 @@
 
                                     <script>
 
-                                        const eliminarButton = document.getElementById('eliminarButton');
-                                        const confirmacionContenedor = document.getElementById('confirmacionContenedor');
-                                        const confirmarEliminacion = document.getElementById('confirmarEliminacion');
-                                        const cancelarEliminacion = document.getElementById('cancelarEliminacion');
+                                        document.addEventListener('DOMContentLoaded', () => {
+                                            const botonesEliminar = document.querySelectorAll('.Eliminar');
+                                            const modal = document.querySelector('.modal');
+                                            const confirmarEliminacion = document.querySelector('.btnConfirmarDelete');
+                                            const cancelarEliminacion = document.querySelector('.noDelete');
 
-                                        eliminarButton.addEventListener('click', function (event) {
-                                            confirmacionContenedor.style.display = 'flex';
-                                        });
-                                        confirmarEliminacion.addEventListener('click', function () {
-                                            alert('¡El registro ha sido eliminado!');
-                                            confirmacionContenedor.style.display = 'none';
-                                        });
+                                            if (modal) {
+                                                modal.style.display = 'none';
+                                            }
 
-                                        cancelarEliminacion.addEventListener('click', function () {
-                                            confirmacionContenedor.style.display = 'none';
-                                        });
+                                            botonesEliminar.forEach(boton => {
+                                                boton.addEventListener('click', () => {
+                                                    if (modal) {
+                                                        modal.style.display = 'flex';
+                                                    }
+                                                });
+                                            });
 
-                                        window.addEventListener('click', function (event) {
-                                            if (event.target === confirmacionContenedor) {
-                                                confirmacionContenedor.style.display = 'none';
+                                            if (confirmarEliminacion) {
+                                                confirmarEliminacion.addEventListener('click', () => {
+                                                    alert('¡El registro ha sido eliminado!');
+                                                    if (modal) {
+                                                        modal.style.display = 'none';
+                                                    }
+                                                });
+                                            }
+
+                                            if (cancelarEliminacion) {
+                                                cancelarEliminacion.addEventListener('click', () => {
+                                                    if (modal) {
+                                                        modal.style.display = 'none';
+                                                    }
+                                                });
+                                            }
+
+                                            if (modal) {
+                                                modal.addEventListener('click', (event) => {
+                                                    if (event.target === modal) {
+                                                        modal.style.display = 'none';
+                                                    }
+                                                });
                                             }
                                         });
                                     </script>
