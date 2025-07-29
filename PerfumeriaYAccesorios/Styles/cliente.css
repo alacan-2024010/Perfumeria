@@ -74,10 +74,9 @@ nav .logo:hover {
 
 .contenedor-principal {
     display: flex;
-    flex-direction: row;
-    width: 95%;
+    width: 90%;
     max-width: 1400px;
-    height: auto;
+    height: 80vh;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(15px);
     border-radius: 20px;
