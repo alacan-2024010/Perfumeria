@@ -23,22 +23,6 @@
             <file>file:/C:/Perfumeria/Perfumeria/JavaEE2025IN5BM/web/Styles/factura.css</file>
             <file>file:/C:/Perfumeria/Perfumeria/JavaEE2025IN5BM/web/index.jsp</file>
         </group>
-        <group>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/Styles/carrito.css</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/principal.jsp</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/carrito.jsp</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/Styles/login.css</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/src/java/com/alanlacan/controlador/Controlador.java</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/src/java/com/alanlacan/controlador/Validar.java</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/cliente.jsp</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/index.jsp</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/src/java/com/alanlacan/modelo/ClienteDAO.java</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/Styles/cliente.css</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/Styles/registrar.css</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/Styles/principal.css</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/src/java/com/alanlacan/modelo/Cliente.java</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/admin.jsp</file>
-            <file>file:/C:/Perfumeria/JavaEE2025IN5BM/web/Styles/admin.css</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
