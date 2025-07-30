@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essenza & Co. | Gestión de Ventas</title>
-    <link rel="stylesheet" href="Styles/ventas.css">
+    <link rel="stylesheet" href="Styles/venta.css">
 </head>
 <body>
     <nav>
@@ -37,6 +37,9 @@
         </div>
 
         <div class="table-container">
+
+
+            
             <table>
                 <thead>
                     <tr>
@@ -48,7 +51,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                  
                 </tbody>
             </table>
         </div>
