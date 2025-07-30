@@ -65,7 +65,7 @@
                 const li = document.createElement('li');
                 li.className = 'producto-carrito';
                 li.innerHTML = `
-                    <div class="imgProducto"><img class="imgProducto" src="${item.img}" alt="${item.name}" /></div>
+                    <div class="imgProducto"><img class="imgProducto" src="${item.image}" alt="${item.name}" /></div>
                     <div class="temaProducto">
                         <h2 class="productoTitulo">${item.name}</h2>
                         <div class="infoProducto">
