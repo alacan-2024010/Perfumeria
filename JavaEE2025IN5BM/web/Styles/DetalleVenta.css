@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: chill;
-    background-image: url(img/DetalleVentasFondo.png);
+    background-image: url(../img/DetalleVentasFondo.png);
     background-size: 50% 50%;
     background-repeat: no-repeat; 
     background-position: center; 
