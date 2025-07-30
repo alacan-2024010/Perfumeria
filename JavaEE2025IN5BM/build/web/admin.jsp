@@ -18,7 +18,7 @@
     <nav>
         <ul>
             <li><a href="cliente.jsp">Clientes</a></li>
-            <li><a href="proveedores.jsp">Proveedores</a></li>
+            <li><a href="proveedor.jsp">Proveedores</a></li>
             <li><a href="producto.jsp">Productos</a></li>
             <li><a href="empleado.jsp">Empleados</a></li>
             <li><a href="venta.jsp">Ventas</a></li>
