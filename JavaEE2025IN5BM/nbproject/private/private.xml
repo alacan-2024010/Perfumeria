@@ -24,6 +24,7 @@
             <file>file:/C:/Perfumeria/Perfumeria/JavaEE2025IN5BM/web/index.jsp</file>
         </group>
         <group/>
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Perfumeria/Perfumeria/JavaEE2025IN5BM/web/Styles/cliente.css</file>
             <file>file:/C:/Perfumeria/Perfumeria/JavaEE2025IN5BM/web/admin.jsp</file>
@@ -45,5 +46,7 @@
             <file>file:/C:/Perfumeria/Perfumeria/JavaEE2025IN5BM/web/index.jsp</file>
             <file>file:/C:/Perfumeria/Perfumeria/JavaEE2025IN5BM/web/detalleCompra.jsp</file>
         </group>
+=======
+>>>>>>> origin/ftaalvarez-2024004
     </open-files>
 </project-private>
