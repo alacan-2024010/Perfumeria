@@ -1,9 +1,6 @@
 
 package com.alanlacan.modelo;
 
-
-
-import com.alanlacan.modelo.detalleCompra;
 import javax.persistence.*;
 import java.util.List;
 
